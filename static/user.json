@@ -1,0 +1,31 @@
+
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "total": "3",
+    "rows": [
+      {
+        "list":1,
+        "userName": "张铎",
+        "userAccount": "zhangduo",
+        "userCompanyName":"统计局",
+        "userPost": "统计人员"
+      },
+      {
+        "list":2,
+        "userName": "李文",
+        "userAccount": "liwen",
+        "userCompanyName":"统计局",
+        "userPost": "统计人员"
+      },
+      {
+        "list":3,
+        "userName": "吴晗",
+        "userAccount": "wuhan",
+        "userCompanyName":"统计局",
+        "userPost": "统计人员"
+      }
+    ]
+  }
+}

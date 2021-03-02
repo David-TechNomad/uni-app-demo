@@ -1,0 +1,70 @@
+/*
+ * 表单样式集合
+ */
+ .el-form-item{
+    margin-bottom: 0;
+  }
+ .searchKey{
+  width: 100%;   
+  padding:5px 10px;
+  background: #fff;    
+  //overflow-x:  auto;   
+  .el-form{
+    height: 40px;
+    width: 100%;
+   // min-width:1200px;
+  }   
+  .radioTab{
+    .el-radio.is-bordered+.el-radio.is-bordered{
+      margin-left: -2px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .el-radio.is-bordered{
+      border-color: #ccc
+    }
+    .el-radio.is-bordered.is-checked{
+      background-color: #ccc
+    }
+  } 
+  .el-button+.el-button{
+    margin-left: 0px;
+  } 
+ 
+}
+.userInformationView {
+  .BtnGroup.el-form-item {
+    .el-form-item__content{
+      margin-left: 10px !important;
+    }
+  }
+  .el-table {
+    overflow: inherit !important;
+    td{
+      border: none;
+    }
+  }
+  .el-table::before{
+    height: 0px;
+  }
+  .textView{
+    .el-form-item__content{
+      margin-left: 0px !important;
+    }
+  }
+  
+}
+.el-checkbox__input {                
+  width: 15px;
+}      
+.eepListView,.newlywenjianView {
+  .leftMain {
+      .leftMainCon  {
+          .el-input.is-disabled .el-input__inner {
+              background-color: #fff;
+              border-color: #E4E7ED;
+              color: #606266;
+          }
+      }
+  }
+}

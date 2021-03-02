@@ -1,0 +1,35 @@
+.header_container {
+  height: 55px;
+  line-height: 55px;
+  background:#fff;
+  position: relative;
+  z-index: 1;
+  .header{
+    height:55px;
+    padding: 0px 20px;
+    .logoImg{
+      float: left;
+      width: 470px;
+      margin: 10px 0;
+    }
+    .logoImg2 {
+      float: left;
+      width: 370px;
+      margin: 10px 0;
+    }
+    .userinfo{
+      float: right; 
+      cursor: pointer;
+      .userinfo-fa .fa{
+        font-size: 1.125rem;
+        color: #4295cd;
+        margin:0 5px;
+        vertical-align: middle; 
+      }     
+     }
+  
+  }  
+}
+.headerDropdownView {
+  top: 30px !important;
+}

@@ -1,0 +1,63 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  .main {   
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    .content-container {    
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;     
+      right: 0;     
+      .grid-content{
+        position:absolute;
+        bottom:0;
+        top:95px;        
+        width: 100%; 
+        .content-wrapper{
+          height:100%;
+        }
+      }
+      .breadcrumb-container {
+        .title {
+          width: 200px;
+          float: left;
+          color: #475669;
+        }
+        .breadcrumb-inner {
+          float: right;
+        }
+      }
+    }
+  }
+
+  //全局浮动窗口
+  .fixUploadWindow{
+    position: fixed;
+    right: 220px;
+    top: 29px;
+    z-index: 1;
+    //悬浮球样式
+    .auditBtn{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: #67C23A;
+      line-height: 45px;
+      font-size:13px;
+      text-align: center;
+      cursor:pointer;
+      font-weight:700;
+      background:url('../imgs/uploadTip.gif') no-repeat;
+      background-size: 200% 280%;
+      background-position: 51% 60%;
+    }
+  }
+  
+}

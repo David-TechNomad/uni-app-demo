@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>万达集团档案管理系统</title>
+  <meta name="renderer" content="webkit">
+  <link rel="icon" type="image/png" href="image/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="layui/css/layui.css"  media="all">
+  <link href="yangShi2.css" rel=Stylesheet type=text/css>
+  <script src="js/jquery.min.js" type=text/javascript></script>
+  <script src="js/jquery.base64.js" type=text/javascript></script>
+    <script src="js/yuMing.js" type=text/javascript></script>
+</head>
+
+<script>
+    var url = window.location.href;
+    url = decodeURI(url);
+    var weiZhi = url.indexOf("?");
+
+    var url1 = url.substr(weiZhi,url.length);
+    function getBrowserInfo(){
+        var Sys = {browser:'',ver:''};
+        var ua = navigator.userAgent.toLowerCase();
+
+        var re =/(windows nt|msie|firefox|chrome|opera|version).*?([\d.]+)/;
+        var m = ua.match(re);
+        Sys.browser = m[1].replace(/version/, "'safari");
+        Sys.ver = m[2];
+        return Sys;
+    }
+
+    var sys = getBrowserInfo();
+    //sys.browser得到浏览器的类型，sys.ver得到浏览器的版本
+    //alert(sys.browser + "的版本是：" + sys.ver);
+    //var yuMing = getYuMing();
+    if(!(sys.browser === 'msie' && parseInt(sys.ver) <=10 )){
+        //alert('不是ie8,9跳转到vue')
+        if(url.indexOf('dangan.wanda-dev.cn') > 0){
+            window.location.href = 'http://dangan.wanda-dev.cn:8080/test/?#/selfTip/transferDetail/quanTransDatil'+url1;
+        }else if(url.indexOf('dangan.wanda.cn') > 0){
+            window.location.href = 'http://dangan.wanda.cn/?#/selfTip/transferDetail/quanTransDatil'+url1;
+        }
+
+    }
+</script>
+<body>          
+<div class="main" style="padding:20px;">
+    <div class="mainTitle" style="text-align:center;">
+        <span>创建全宗申请</span>
+<!--		<div style="float:right; padding-right:20px;">
+			<input type="button" class="el-button checkWay rt el-button&#45;&#45;default" value="打印" onclick="return print();"/>
+		</div>-->
+    </div>
+    <div class="mainDoc">
+        <div class="mainCon basicList">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                申请单号：<span id="appNo"></span>
+                <div class="titleSect"></div>
+            </div>
+            <ul class="rowsForm">
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">标题</span></div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content bg-purple-light"><span class="span2" id="title"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请人</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" id="createPerson"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请人部门</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" id="createOrgName"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请时间</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2"  id="createDate"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content1 bg-purple"
+                             style="border-left: 1px solid rgb(204, 204, 204); border-right: 0px;"><span class="span1">创建事由</span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content1 bg-purple-light" style="padding-left: 10px;line-height: 40px;border-left: 0px;" id="cause"></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainDoc">
+        <div class="mainCon basicList">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                全宗信息
+                <div class="titleSect"></div>
+            </div>
+            <ul class="rowsForm1">
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">全宗名</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" id="fondName"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">全宗号</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" id="fondCode"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">上级公司</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2"  id="parentFondsName"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">万信对应公司</span></div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content bg-purple-light"><span class="span2" id="orgName"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row" id="div">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">是否项目公司</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" id="isProjectCompany"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">所属分区</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" id="region"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">全宗类型</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2"  id="fondType"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content1 bg-purple"
+                             style="border-left: 1px solid rgb(204, 204, 204); border-right: 0px;"><span class="span1">备注</span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content1 bg-purple-light" style="padding-left: 10px;line-height: 40px;border-left: 0px;" id="comments"></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+	
+	<div class="mainDoc" style="margin-top:20px;">
+		<div class="mainCon basicList" style="margin-bottom:0px;border-bottom: 0;">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                审批流程
+                <div class="titleSect"></div>
+            </div>
+		</div>
+		<div style="padding:10px;border:1px solid #c8c8cb;line-height:20px;">
+			<div id="span"></div>
+		</div>
+	</div>
+
+    <!--<div class="mainDoc" style="margin-top:20px;">
+        <div class="mainCon basicList" style="margin-bottom:0px;border-bottom: 0;">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                审批意见
+                <div class="titleSect"></div>
+            </div>
+        </div>
+        <div style="padding:10px;border:1px solid #c8c8cb;line-height:20px;">
+            &lt;!&ndash;<form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">选择框</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">北京</option>
+                            <option value="1">上海</option>
+                            <option value="2">广州</option>
+                            <option value="3">深圳</option>
+                            <option value="4">杭州</option>
+                        </select>
+                    </div>
+                </div>
+            </form>&ndash;&gt;
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">选择框：</label>
+                <select id="yiJian" name="city" lay-verify="required" style="width: 150px;height: 30px;" onchange="changeYiJian()">
+                    <option value="">请选择</option>
+                    <option value="1">同意</option>
+                    <option value="2">不同意</option>
+                    <option value="3">收到</option>
+                </select>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">文本域：</label>
+                <div class="layui-input-block">
+                    <textarea id="desc" name="desc" placeholder="最多输入1000字" class="layui-textarea"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+<!--	<div class="mainTitle" style="text-align:center;margin:10px;">
+        <input type="button" class="el-button checkWay rt el-button&#45;&#45;default" value="批准" onclick="applySubmit(0)"/>
+        <input type="button" class="el-button checkWay rt el-button&#45;&#45;default" value="驳回" onclick="applySubmit(1)"/>
+    </div>-->
+	<div class="mainDoc" style="margin-top:0px;">
+		<div class="mainCon basicList" style="margin-bottom:0px;border-bottom: 0;">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                审批记录
+                <div class="titleSect"></div>
+            </div>
+		</div>
+		<div style="padding:10px;border:1px solid #c8c8cb">
+			<table class="layui-hide" id="table2"></table>  
+		</div>
+	</div>
+</div> 
+        
+<script src="layui/layui.js" charset="utf-8"></script>
+<script>
+    var parameOne;
+    var parameTow;
+    if(url.indexOf("nodeId") > 0){
+        if(url.split('?')[1]){
+            var bb = (url.split('?')[1]).split("&")[0];
+            var pb = bb.substr(bb.indexOf("=")+1);
+            var b =$.base64.decode(
+                pb
+            );
+            var cc = (url.split('?')[1]).split("&")[1];
+            var pc = cc.substr(cc.indexOf("=")+1);
+            var c = $.base64.decode(
+                pc
+            );
+            parameOne = parseInt(b);//参数1
+            parameTow = c;//参数2
+        }
+    }
+    var obj = {
+        id: parameOne,
+        stepId: parameTow
+    };
+    var tableHeader = [];
+    var tableData1 = [];
+    var tableData2 = [];
+    $.ajax({
+        dataType: 'json',
+        type:'post',
+        async:false,
+        xhrFields: {
+            withCredentials: true
+        },
+        contentType: 'application/json;charset=UTF-8',
+        url:'/fondsApproval/getFondsApprovalInfo',
+        data:JSON.stringify(obj),
+        success:function (res) {
+            $("#appNo").text(res.data.processNo);
+            $("#title").text(res.data.title);
+            $("#createPerson").text(res.data.createPerson);
+            $("#createOrgName").text(res.data.createOrgName);
+            $("#createDate").text(res.data.createDate.substr(0,10));
+            $("#cause").text(res.data.cause);
+            $("#fondName").text(res.data.fondName);
+            if(res.data.fondCode != null){
+                $("#fondCode").text(res.data.fondCode);
+            }
+            $("#parentFondsName").text(res.data.parentFondsName);
+            $("#orgName").text(res.data.orgName);
+            if(res.data.isProjectCompany){
+                $("#isProjectCompany").text("是");
+            }else{
+                $("#isProjectCompany").text("否");
+            }
+            if(res.data.region == 3){
+                $("#region").text("北区");
+            }else if(res.data.region == 2){
+                $("#region").text("中区");
+            }else if(res.data.region == 1){
+                $("#region").text("南区");
+            }
+            if(res.data.fondType == 1){
+                $("#fondType").text("集团");
+            }else if(res.data.fondType == 2){
+                $("#fondType").text("地方");
+            }
+            if(res.data.comments != null){
+                $("#comments").text(res.data.comments);
+            }
+            var roleSelect = res.data.fondsApprovalRoleUserList;
+            var html = '';
+            for(var i = 0;i < roleSelect.length;i++){
+                html += "<div class='el-col el-col-3'>" +
+                    "<div class='grid-content bg-purple'><span class='span1'>"+roleSelect[i].roleName+"</span></div>" +
+                    "</div>" +
+                    "<div class='el-col el-col-5'>" +
+                    "<div class='grid-content bg-purple-light' style='border-right: 0px;'><span" +
+                    "     class='span2'>"+roleSelect[i].userName+"</span></div>" +
+                    "</div>";
+            };
+            $("#div").append(html);
+            var html = '';
+            var text = '';
+            for(var i = 0;i<res.data.stepMap.length;i++){
+                text = res.data.stepMap[i].stepName+"【"+res.data.stepMap[i].userName+
+                    "<span><i class='layui-icon layui-icon-ok' style='color: green;'></i></span><span><i class='layui-icon layui-icon-close' style='color: red;'></i></span>】<span id="+i+">→</span>";
+                if(res.data.stepMap[i].stepType == 0 || res.data.stepMap[i].stepType == 5 || res.data.stepMap[i].stepType == 8){
+                    text = res.data.stepMap[i].stepName+"【"+res.data.stepMap[i].userName+
+                        "<span><i class='layui-icon layui-icon-ok' style='color: green;'></i></span>】<span id="+i+">→</span>";
+                }else if(res.data.stepMap[i].stepType == 1){
+                    text = res.data.stepMap[i].stepName+"【"+res.data.stepMap[i].userName+
+                        "<span><i class='layui-icon layui-icon-close' style='color: red;'></i></span>】<span id="+i+">→</span>";
+                }else {
+                    text = res.data.stepMap[i].stepName+"【"+res.data.stepMap[i].userName+
+                        "】<span id="+i+">→</span>";
+                }
+                html += text;
+            };
+            $("#span").append(html);
+            var shuZi = res.data.stepMap.length-1;
+            $("#"+shuZi).hide();
+            for(var a = 0;a<res.data.Approval.length;a++){
+                var auditResult = '';
+                if(res.data.Approval[a].auditResult == 1){
+                    auditResult = '驳回';
+                }else if(res.data.Approval[a].auditResult == 3){
+                    auditResult = '加签';
+                }else if(res.data.Approval[a].auditResult == 2){
+                    auditResult = '转发';
+                }else if(res.data.Approval[a].auditResult == 4){
+                    auditResult = '抄送';
+                }else if(res.data.Approval[a].auditResult == 0){
+                    auditResult = '审批通过';
+                }else if(res.data.Approval[a].auditResult == 5){
+                    auditResult = '提交审批';
+                }else if(res.data.Approval[a].auditResult == 6){
+                    auditResult = '批注';
+                }else if(res.data.Approval[a].auditResult == 7){
+                    auditResult = '关闭';
+                }else if(res.data.Approval[a].auditResult == 8){
+                    auditResult = '重新提交';
+                }
+                var jiLuObj = {
+                    id:res.data.Approval.length-a,
+                    stepName:res.data.Approval[a].stepName,
+                    ApprovalContext:res.data.Approval[a].ApprovalContext,
+                    createPersion:res.data.Approval[a].createPersion,
+                    auditDate:res.data.Approval[a].auditDate,
+                    auditResult:auditResult,
+                    stepUserName:res.data.Approval[a].stepUserName,
+                };
+                tableData2.push(jiLuObj);
+            }
+        },
+        error:function(xhr,state,errorThrown){
+            document.write(errorThrown)
+            document.write(xhr);
+        }
+    })
+layui.use('table', function(){
+  var table = layui.table;
+  table.render({
+    elem: '#table1'
+    ,data:tableData1
+    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+    ,cols: [tableHeader]
+    ,limit: tableData1.length//显示的数量
+  });
+  var cols = [
+      {field:'id', width:80, title: '序号'}
+      ,{field:'stepName',  title: '审批节点'}
+      ,{field:'ApprovalContext',  title: '审批意见'}
+      ,{field:'createPersion', title: '审批人'}
+      ,{field:'auditDate', title: '审批时间'} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+      ,{field:'auditResult', title: '操作'}
+      ,{field:'stepUserName', title: '接收人'}
+  ];
+  table.render({
+    elem: '#table2'
+    //url:'http://10.1.235.248:9090/partTimeArchivist/checkUser'
+	,data:tableData2
+    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+    ,cols: [cols]
+      ,done: function (res, curr, count) {
+          $('th').css({'background-color': '#efeff0', 'color': '#fff'});
+          $('th').css({'color': 'black', 'color': 'black'});
+      }
+    ,limit: tableData2.length//显示的数量
+  });
+});
+
+
+
+function print(){
+	alert(打印);
+	return false;
+}
+
+
+function applySubmit(a){
+    var parame = {
+        id:parameTow,
+        auditResult:a,
+        addUserId:'',
+        auditRemark:$("#desc").val(),
+        fondCode:$("#fondCode1").val(),
+    };
+    console.log(parame)
+    $.ajax({
+        dataType: 'json',
+        type:'post',
+        xhrFields: {
+            withCredentials: true
+        },
+        contentType: 'application/json;charset=UTF-8',
+        url:'/fondsApproval/fondsApproval',
+        data:JSON.stringify(parame),
+        success:function (res) {
+            if(res.succeeded){
+                window.opener = null;
+                window.close();
+            }else{
+                layer.msg(res.errorMessage, { icon: 7, time: 2000, shade: [0.6, '#000', true] });
+            }
+
+        },
+        error:function(xhr,state,errorThrown){
+            document.write(errorThrown);
+            document.write(xhr);
+        }
+    })
+}
+
+function changeYiJian(){
+    if($("#yiJian").val() == 1){
+        $("#desc").val("同意");
+    }else if($("#yiJian").val() == 2){
+        $("#desc").val("不同意");
+    }else{
+        $("#desc").val("收到");
+    }
+
+}
+</script>
+
+</body>
+</html>

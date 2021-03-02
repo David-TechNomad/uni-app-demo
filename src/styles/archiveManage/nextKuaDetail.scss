@@ -1,0 +1,306 @@
+.NextKuaDetail{
+    margin-left:2px;
+    height:100%;
+    position:relative;
+    position: relative;
+  }
+  .NextKuaDetail .conbinefilet{
+  
+    height:50px;
+    margin-right:5px;
+    line-height:50px;
+    >span{
+      margin-left:8px;
+    }
+  }
+  .NextKuaDetail .conbinefilet .checkWay{
+    float: right;
+    margin-top:10px;
+  }
+  .NextKuaDetail .combinetables{
+  
+    position: absolute;
+    top:50px;
+    left:5px;
+    right:5px;
+    bottom:5px;
+    .combinetableLl{
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      width: 55%;
+      border:1px solid #cccccc;
+      background: #ffffff;
+      .sorts{
+        width: 55%;
+        float: left;
+        height:40px;
+        border-bottom:1px solid #cccccc;
+        padding:0 5px;
+        line-height:40px;
+        .el-button{
+          float: right;
+          margin-top:5px;
+        }
+      }
+      .enterstoreTables{
+        position: absolute;
+        top:40px;
+        bottom:0;
+        left:5px;
+        right:5px;
+      }
+    }
+    .combinetableR{
+      width:44%;
+      height:100%;
+      float: right;
+      border:1px solid #cccccc;
+      background: #ffffff;
+      position:relative;
+      >p{
+        height:40px;
+        line-height: 40px;
+        padding-left:5px;
+        border-bottom:1px solid #cccccc;
+      }
+      .enterTree{
+        position:absolute;
+        top:40px;
+        bottom:120px;
+        width:100%;
+        padding:0 10px;
+        overflow-y:auto;
+      }
+      .combinetableRB{
+        height:120px;
+        width:100%;
+        padding:0 10px;
+        position:absolute;
+        bottom:0;
+        border-top:1px solid #cccccc;
+        text-align:center;
+        .el-input{
+          margin-top:5px;
+        }
+        >p{
+          font-size:12px;
+          color: #666666;
+          margin-top:5px;
+          height:40px;
+          line-height:20px;
+          text-align:left;
+        }
+        .el-button{
+          margin-top:5px;
+        }
+      }
+    }
+  }
+  .left{
+    border: 1px solid lightgrey;
+    background: #ffffff;
+    position: absolute;
+    width: 23%;
+    right: 20%;
+    top: 81px;
+    bottom: 1px;
+    .searchCompany{
+      height: 28px;
+      width: 100% !important;
+      line-height: 28px;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+      color: #333333;
+      font-weight:600;
+      border-radius: 4px;
+      padding-left: 10px;
+      background: white;
+      .fileManagementElDropdown{
+        height:26px;
+        line-height:26px;
+        width: 100%;
+        .el-dropdown-link{
+          width:100%;
+          display: inline-block;
+          position:relative;
+          overflow-x: hidden;
+          padding:0 10px 0 0;
+        }
+      }
+    }
+    .treeTitle{
+      border: 1px solid #cccccc;
+      width: 75%;
+      padding-left:5px;
+      overflow-y:auto;
+      top:64px;
+      bottom:0;
+      left: 0;
+      /* position: absolute; */
+      position: absolute;
+      float: left;
+    }
+    .fabutton{
+  
+      width: 24%;
+      height: 100%;
+      /* position: absolute; */
+      float: right;
+      .fontClass{
+        .el-button{
+          display: inline-block;
+          height:37px;
+          width:13px;
+          margin-top: 20px;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+      }
+  
+    }
+  }
+  .right{
+    border: 1px solid lightgrey;
+    position: absolute;
+    background: #ffffff;
+    right: 0%;
+    top: 81px;
+    bottom: 1px;
+    width:21%;
+    .searchCompany{
+      height: 28px;
+      width: 100% !important;
+      line-height: 28px;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+      font-weight:600;
+      padding-left: 10px;
+      color: #333333;
+      border-radius: 4px;
+      background: white;
+  
+      .fileManagementElDropdown{
+        height:26px;
+        line-height:26px;
+        width: 100%;
+        .el-icon--right{
+          float: right;
+          margin: 3px;
+        }
+        .el-dropdown-link{
+          width:100%;
+          display: inline-block;
+          position:relative;
+          overflow-x: hidden;
+          padding:0 10px 0 0;
+        }
+      }
+    }
+    .treeTitle{
+  
+      border: 1px solid #cccccc;
+      width: 75%;
+      padding-left:5px;
+      /* position: absolute; */
+      position: absolute;
+      overflow-y: auto;
+      top:42px;
+      bottom:0;
+      left: 0;
+    }
+    .fabutton{
+  
+      width: 24%;
+      height: 100%;
+      /* position: absolute; */
+      float: right;
+      .fontClass{
+        .el-button{
+          display: inline-block;
+          height:37px;
+          width:13px;
+          margin-top: 20px;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+      }
+  
+    }
+  
+  }
+  .left  .thisTitle{
+    text-align: center;
+    border-top: none;
+    p{
+      text-align: left;
+      line-height: 18px;
+      color: #333333;
+      cursor: pointer;
+    }
+  }
+  .right .thisTitle{
+    text-align: center;
+    border-top: none;
+    p{
+      text-align: left;
+      line-height: 18px;
+      color: #333333;
+      cursor: pointer;
+    }
+  }
+  .up_fondTitle{
+    margin-left: 5%;
+  }
+  .thisBig{
+    position: absolute;
+    right: 2%;
+    top: 30%;
+  }
+  .spanDiv{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+  }
+  .bigJing{
+    position: absolute;
+    left: 92%;
+    bottom: 30%;
+  }
+  .myInput{
+    width: 140px;
+  }
+  .checkNamess{
+    width: 210px !important;
+  }
+  .v-modal{
+    display: none;
+  }
+  .active{
+    background: #cccccc;
+  
+  }
+  .raw{
+    width:44%;
+    float:right;
+    background:#fff;
+    .duiying{
+      width: 100%;
+      height: 32px;
+      float: left;
+      span{
+        display: inline-block;
+        margin: 10px;
+      }
+      .buttonfloat{
+        float: right;
+        margin-right:10px;
+      }
+    }
+  }
+  .tableheated{
+    width: 55%;
+    float: left;
+    background: #fff;
+  }

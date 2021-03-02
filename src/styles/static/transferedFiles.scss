@@ -1,0 +1,115 @@
+/**
+ * @css
+ * @档案移交统计
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    .mainTitle{
+      height:50px;
+      line-height:50px;
+    }
+    .container{
+      height: 100%;
+      .companyContainer{
+        height:100%;
+        .title{
+          height:20px;
+          line-height:20px;
+          color: #00000082;
+        }
+        .tree{
+          width:23%;
+          border:1px solid #ccc;
+          background: #fff;
+          height:86%;
+          overflow-y: auto;
+          padding-top:10px;
+          float: left;
+        }
+        .messageContainer{
+          width:77%;
+          height:86%;
+          float: left;
+          padding-left:10px;
+          .chartBox1{
+            height:80%;
+            width:100%;
+            .chartBox{
+              // width:100%;
+              // height:245px;
+              // overflow-y: auto;
+              // margin-bottom: 15px;
+            }
+          }
+          .containBox{
+            width:100%;
+            height:100%;
+            .counTitles{
+              width: 40%;
+              height:86%;
+              float: left;
+            }
+          }
+          .counTitle{
+            width:100%;
+            height:87%;
+            >.messageItemTitle{
+              height:40px;
+              white-space: nowrap;
+              overflow-x: auto;
+              >span{
+                >span{
+                  margin-left:30px;
+                }
+                display: inline-block;
+              }
+              >div{
+                display: inline-block;
+              }
+            }
+          }
+          
+        }
+      }
+    }
+   
+    
+ 
+    // .container{
+    //   position: absolute;
+    //   top:70px;
+    //   bottom:5px;
+    //   right:10px;
+    //   left:10px;
+    //   .companyContainer{
+    //     width:247px;
+    //     height:100%;
+    //     background: #ffffff;
+    //     border:1px solid #cccccc;
+    //     position: relative;
+    //     >p{
+    //       height:30px;
+    //       line-height:30px;
+    //       padding-left:5px;
+    //     }
+    //     >.tree{
+    //       position: absolute;
+    //       top:30px;
+    //       bottom:0;
+    //       right:0;
+    //       left:0;
+    //       overflow-y: auto;
+    //     }
+    //   }
+    //   >.messageContainer{
+    //     position:absolute;
+    //     top:0;
+    //     right:0;
+    //     bottom:0;
+    //     left:255px;
+        
+    //   }
+    // }
+  }

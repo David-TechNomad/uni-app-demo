@@ -1,0 +1,224 @@
+/**
+ * @css
+ * @检索结果
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    position:relative;
+    .mainTitle{
+      height:50px;
+      line-height:50px;
+      text-align:center;
+      color:#205092;
+      font-size:15px;
+      font-weight:700;
+      span{
+        font-size:18px;
+      }
+      button{
+        margin: 11px 7px;
+      }
+    }
+    .mainDoc{
+      position:absolute;
+      top:50px;
+      bottom:10px;
+      left:0;
+      right:0;
+      padding:0 12px 0 19px;
+      overflow-y:auto;
+      .mainCon{
+        background:#fff;
+        padding:10px;
+        margin:20px 0;
+        border-radius:2px;
+        border:1px solid #c8c8cb;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        .loanTipTitle{
+          position:relative;
+          padding:0 10px 0 15px;
+          .titleSect{
+            width:7px;
+            height:40px;
+            background:rgb(66,139,202);
+            position:absolute;
+            top:0;
+            left:-7px;
+            border-radius:4px 0 0 4px;
+          }
+        }
+        .waitTable{
+          padding:0 10px 10px;
+        }
+        .listTitle{
+          background:rgb(109,134,168);
+          color:#fff;
+          height:30px;
+          line-height:30px;
+          text-align:center;
+          width:100px;
+          border-radius:3px;
+        }
+        >ul li{
+          margin:15px 10px;
+        }
+        .borderTable{
+          margin-top:8px;
+        }
+      }
+      .applyDone{
+        text-align:center;
+        padding:0;
+      }
+      .basicList{
+        padding:0;
+        .basicForm{
+          margin:0;
+        }
+      }
+      .basicList1{
+        min-height:50px;
+        margin:0px 0px 5px;
+        margin:5px 10px;
+        line-height: 20px;
+      }
+      .mainCon:first-of-type{
+        margin:0;
+      }
+    }
+    .checkModal{
+      .checkCon{
+        position: absolute;
+        bottom: 65px;
+        top: 40px;
+        left:10px;
+        right:10px;
+      }
+      .checkArea{
+        height:100%;
+        border:1px solid #ccc;
+        overflow-y:hidden;
+        position:relative;
+        .topCheckCon{
+          background:rgb(235,248,255);
+          padding:5px 10px;
+          line-height:40px;
+          height:50px;
+        }
+        .topCheckTree{
+          padding:0 10px;
+          overflow-y:auto;
+          position:absolute;
+          width:100%;
+          top:50px;
+          bottom:0;
+        }
+      }
+      .checkBottomRight{
+        padding:10px;
+      }
+      .checkBottomLeft{
+        padding:10px;
+      }
+    }
+  }
+  .rowsForm{
+    padding:10px;
+    el-row{
+      margin-bottom: 5px !important;
+      z-index: 1;
+    }
+    el-col{
+      border-radius: 0px;
+      z-index: 1;
+    }
+    .bg-purple {
+      background: #ebebeb;
+      text-align: right;
+      border:1px solid #ccc;
+      border-left:0;
+      border-top:0;
+      border-bottom: 0;
+      border-right:0;
+      &:nth-child(1){
+        border-left:1px solid #ccc;
+        border-top:1px solid #ccc;;
+      }
+    }
+    .bg-purple-light {
+      background: #fff;
+      border:1px solid #ccc;
+      border-left:0;
+      border-top:0;
+      border-bottom: 0;
+      border-right:0;
+      &:nth-child(1){
+        border-top:1px solid #ccc;
+        border-right:1px solid #ccc;
+      }
+    }
+    .grid-content {
+      border-radius: 0;
+      height: 35px;
+      //line-height:28px;
+      padding-right:10px;
+      //max-height: 21px;
+    }
+    .grid-content1 {
+      border-radius: 0px;
+      height: 35px;
+      //line-height:28px;
+      padding-right:10px;
+      //min-height: 72px;
+      border:1px solid #ccc;
+      &:nth-child(1){
+        border-left:0;
+      }
+  }
+  .grid-content2 {
+   border-radius: 0px;
+   min-height: 36px;
+   margin-top:1.5%;
+   margin-left:5%;
+  }
+  .row-bg {
+   padding: 10px 0;
+   background-color: #f9fafc;
+  }
+  .span1{
+  position:relative;
+  left:0px;
+  top:10px;
+  display:inline-block;
+  }
+  .span2{
+  position:relative;
+  left:10px;
+  top:10px;
+  .titleName{
+    width:96%;
+    position: relative;
+    top:-8px;
+    border:0
+  }
+  .inputcal{
+    width:87%;
+    position: relative;
+    top:-3px;
+    border:0
+  }
+  }
+  }
+  .textArea{
+  border-left:1px solid #ccc;
+  
+    .textArar{
+      border:0;
+      padding-left: 1em;
+      padding-top: 5px;
+    }
+  }
+  
+  

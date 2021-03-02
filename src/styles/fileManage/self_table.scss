@@ -1,0 +1,18 @@
+.table_header {
+  .el-table__header{
+    border-bottom:2px solid #000;
+    tr{
+      th{
+        .cell{
+          color: #fff;
+          background:#3D6AC5!important;
+          i{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+

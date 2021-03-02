@@ -1,0 +1,112 @@
+
+.mainCon{
+  height:100%;
+  overflow-y:auto;
+  position:relative;
+  background: url("../../imgs/index/indexBg.png") top ;
+  background-size: 100%;
+  .mainPanel{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top: 0px;
+    bottom: 400px;
+   // padding-top: 8%; 
+    .indexInput{
+        position: absolute;
+        left: 0;
+        right: 110px;     
+        width: auto !important;
+    }
+    .searchTitle{
+      font-weight: bolder;
+      font-size: 1rem;
+    }
+    .indexSearchBtn{    
+      padding:10px 20px; 
+    }
+  
+    .keywordForm{      
+      width:60%;
+      margin:0 auto;
+      .keyWordInfor{
+        font-size:0.875rem;
+        >ul>li{
+        margin:5px 0;
+        }
+      }
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+     }
+ }
+
+  .mainTableList{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;   
+    .TableListPanel{  
+       margin: 2px; 
+       background: #fff;
+       padding: 0 20px; 
+      .TableLisTitle{       
+        line-height:40px;  
+        font-size: 0.875rem; 
+        .text{         
+          font-weight: 600;
+          border-bottom:2px solid #2b87c6;
+          padding: 0 20px
+        }     
+      }
+      .TableLisBody{
+        padding:5px;  
+        height:306px;     
+        li{
+          margin:10px 5px;
+          .tellWords{
+            color:rgb(66,139,202);
+          }
+          .rt{
+            color:#777;
+          }
+        }
+      } 
+      .TableLisBodyF {
+        height: 60px;
+        line-height: 40px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        p{
+          min-width: 800px
+        }
+        .line{          
+          display: inline-block;
+          height: 40px;        
+          width: 1px;
+          margin:0 10px -15px 10px;
+          border-right:1px solid #ccc
+        }       
+      }  
+      .TableLisBodyT{
+        height: 200px;
+      }
+      .TableLisBodytS{
+        li{
+          line-height: 24px;
+        }
+        .listTitle{
+          width:100%;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          -o-text-overflow:ellipsis;
+          -webkit-text-overflow:ellipsis;
+          -moz-text-overflow:ellipsis;
+          white-space:nowrap;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+
+}

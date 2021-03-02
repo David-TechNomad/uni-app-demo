@@ -1,0 +1,85 @@
+/*
+ * 通配
+ */
+#app {
+  position: absolute;  
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+//原文挂接选中文件样式
+.selectPdfColor{
+  border:5px solid #67c23a;
+}
+.mainRouter{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;  
+  padding-top: 55px;
+  height: 100%;
+  width: 100%;
+  background:#448ee1 url('../imgs/main.png');
+  background-size: 100% 100%;
+}
+.mainRouterCon{
+  position: relative;
+  width:60%;
+  margin: 0 auto;
+  height: 100%;
+  color: #fff;
+  font-size:0.875rem; 
+  line-height:28px;
+  z-index: 2;
+  .logobg{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100px;
+    background: url('../imgs/login/bg01.png') 100px 200px;
+    z-index:3;
+  } 
+  .routerCard{
+    position: relative;
+    padding:50px 130px;
+    z-index: 4;
+    .routerLogin{     
+      position: absolute;
+      left:40px;
+      top: 50%;
+      margin-top: -20px;
+    }
+  }
+  .routerCardtitle{
+     font-size: 1.75rem;
+     line-height: 36px; 
+     margin:0 0 0px -10px; 
+  }
+  .routerCardBtn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 80px;
+    width: 80PX;
+    margin-top: -40px;
+    background: #FFF;
+    border: 1PX solid #FFF;  
+    border-radius: 40px;
+    color: #418ADF;
+    font-size: 1rem;
+    line-height: 80px;
+    font-weight: bolder;
+    text-align: center;
+    cursor:pointer; 
+    z-index: 100;
+ }
+ .copyright{
+   position: absolute;
+   width: 100%;
+   bottom:20px;
+   text-align: center;
+ }
+
+}

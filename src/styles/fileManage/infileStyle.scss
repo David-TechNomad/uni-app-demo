@@ -1,0 +1,238 @@
+div{
+    .infileHeader{
+       height:35px;
+       padding-bottom:5px;
+         p:nth-of-type(1){
+           height:30px;
+           line-height:30px;
+           text-align: center;
+           float: left;
+           margin:0 10px;
+           max-width: 48%;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+           overflow: hidden;
+            i{
+              font-style: normal;
+              font-weight:600;
+            }
+         }
+       div:nth-of-type(1){
+         overflow: hidden;
+         border-bottom:2px solid blue;
+         height:30px;
+         .el-button.checkWay:nth-of-type(1){
+           -webkit-border-radius:0;
+           -moz-border-radius: 0;
+           border-radius: 0;
+         }
+         .el-button.checkWay:nth-of-type(2){
+           float: right;
+         }
+       }
+     }
+  .infiledivTwo{
+    //height:40px;
+    padding:10px 0;
+    margin-top:5px;
+    //min-width:800px;
+    overflow-x: auto;
+    background:#ffffff;
+  }
+  .infilerowThr{
+    height:46px;
+    margin-top:5px;
+    padding: 8px 0 8px 10px;
+    background: #FFFFFF;
+    .adjustpositions{
+      float: left;
+      >.el-button{
+        float: left;
+        padding:10px!important;
+        i{
+          display: inline-block;
+          height:13px;
+          width:13px;
+          background: url("../../../../imgs/fileManagement/arrow2.png");
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+      }
+      .el-button:nth-of-type(2) i{
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+       .infileButton{
+         float: right;
+         .toolButton-one {
+           margin-left:10px;
+           width: 100px;
+           display: none;
+           position: relative;
+           > ul:nth-of-type(1) {
+             &::-webkit-scrollbar {
+               width: 0;
+               height: 0;
+             }
+             border-top: 1px solid #cccccc;
+             border-left: 1px solid #cccccc;
+             width: 100%;
+             position: absolute;
+             top: 30px;
+             left: 0;
+             z-index: 100;
+             height: 91px;
+             overflow: auto;
+             button {
+               border-radius: 0;
+               width: 100%;
+               margin: 0 !important;
+               border-bottom: 1px solid #cccccc;
+               border-right: 1px solid #cccccc;
+             }
+             > li {
+               width: 100%;
+               display: none;
+
+             }
+           }
+           > ul:nth-of-type(2) {
+             position: absolute;
+             width: 162px;
+             z-index: 1000;
+             top: 30px;
+             left: -160px;
+             border: 1px solid #ccc;
+             background: #fff;
+             color: #000;
+             > li {
+               height: 40px;
+               line-height: 40px;
+               text-align: center;
+               border-bottom: 1px solid #ccc;
+             }
+           }
+         }
+         .box_ul {
+           > span {
+             display: block;
+             margin-left: 5px;
+             float: right;
+             width: 16px;
+             height: 16px;
+             background: url("../../../../imgs/fileManagement/arrow1.png");
+           }
+         }
+         .myboxspan{
+           > span {
+             display: block;
+             margin-left: 5px;
+             float: right;
+             width: 16px;
+             height: 16px;
+             background: url("../../../../imgs/fileManagement/arrow1.png");
+           }
+         }
+       }
+       .infilenthDivthree {
+       float: right;
+         button{
+           float: left;
+           margin-left:5px;
+         }
+         .mybuttons{
+           margin-left:50px;
+         }
+        .el-button--primary {
+          padding: 0 5px !important;
+        }
+      .NumberManage {
+        //position: relative;
+        line-height: 30px;
+        > span {
+          display: block;
+          margin-left: -5px;
+          margin-top:8px;
+          float: right;
+          width: 16px;
+          height: 16px;
+          background: url("../../../../imgs/fileManagement/arrow1.png");
+        }
+        > ul {
+          position: absolute;
+          width: 162px;
+          top: 40px;
+          right: 0;
+          //top: 186px;
+          //right: 10px;
+          border: 1px solid #ccc;
+          z-index: 10;
+          > li {
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #fff;
+            color: #000;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+      }}
+      .tableContainer{
+        position: absolute;
+        top:156px;
+        right:0;
+        left:10px;
+        bottom:52px;
+        overflow: auto;
+        margin-right:10px!important;
+        .el-table{
+          .el-table__body {
+            .el-button {
+              height: auto !important;
+              background: transparent;
+              border: 1px solid #ccc;
+              padding: 5px !important;
+              color: #000;
+            }
+          }
+        }
+      }
+  .mybuttons {
+    height: 30px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    background: rgb(66, 139, 202);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(17, 105, 180)), color-stop(1, rgb(119, 178, 229)));
+    background: -ms-linear-gradient(bottom, rgb(17, 105, 180), rgb(119, 178, 229));
+    background: -moz-linear-gradient(center bottom, rgb(17, 105, 180) 0%, rgb(119, 178, 229) 100%);
+    background: -o-linear-gradient(bottom, rgb(17, 105, 180), rgb(119, 178, 229));
+    /*filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa',EndColorStr='#efeff0')";*/
+    filter: progid:dximagetransform.microsoft.gradient(startColorStr='#428bca', EndColorStr='#428bca');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#428bca',EndColorStr='#428bca')";
+  }
+  .infilepager{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    right:10px;
+    height:40px;
+    background: #ffffff;
+    padding:5px 5px ;
+  }
+  //数据导出样式
+   .exportrong{
+    height:30px;
+    line-height:30px;
+  }
+  .exportType{
+    padding-left:10px;
+  }
+  }

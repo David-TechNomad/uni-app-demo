@@ -1,0 +1,32 @@
+/**
+ * @css
+ * @借阅车
+ */
+
+.scrollCon{
+  padding:5px;
+  .tableCon{
+    height:100%;
+    ul{
+      border:1px solid #ccc;
+      li{
+        height:30px;
+        line-height:30px;
+        border-bottom:1px solid #ccc;
+        .labelCon div{
+          padding:0 8px;
+          height:29px;
+        }
+        .label div{
+          background:#eee;
+          padding:0 5px;
+          text-align:right;
+          height:29px;
+        }
+      }
+      li:last-child{
+        border-bottom:none;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.combineExistingST{
+  //margin-left:2px;
+  //height:100%;
+  //position:relative;
+}
+.combineExistingST .conbinefile{
+  height:50px;
+  margin-right:5px;
+  line-height:50px;
+  >span{
+      color: #428bca;
+      //border-left:3px solid #428bca;
+      padding:0 10px;
+      line-height: 50px;
+      color: #428bca;
+      font-weight: 500;
+      font-size: 16px
+  }
+}
+.combineExistingST .conbinefile .checkWay{
+  float: right;
+  margin-top:10px;
+}
+.combineExistingST .combinetable{
+  .listTitle{
+    background:rgb(109,134,168);
+    color:#fff;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    width:100px;
+    border-radius:3px;
+  }
+  position: absolute;
+  top:50px;
+  left:0;
+  right:425px;
+  bottom:5px;
+  border:1px solid #cccccc;
+  background: #ffffff;
+  padding:10px 2px 5px 3px;
+  .combinetableOne{
+    position: absolute;
+    top:40px;
+    bottom:5px;
+    left:3px;
+    right:2px;
+  }
+}
+.combineExistingST .filemessage{
+  width:420px;
+  background: #ffffff;
+  border:1px solid #cccccc;
+  overflow: auto;
+  position: absolute;
+  right:0;
+  top: 50px;
+  bottom:0;
+  padding:0 10px;
+  >p{
+    height:30px;
+    line-height:30px;
+    background: #ffffff;
+  }
+  .formContain{
+    position: absolute;
+    top:30px;
+    left: 0;
+    bottom:40px;
+    width:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .el-form{
+      border-top:1px solid #cccccc;
+      border-bottom:1px solid #cccccc;
+    }
+  }
+}
+.combineExistingST .filemessage .filemessageDiv{
+  width:100%;
+  position: absolute;
+  bottom:0;
+  left:0;
+  height:40px;
+  padding:5px 0;
+  background: #cccccc;
+}
+.combineExistingST .filemessage .filemessageDiv .el-button{
+  float: right;
+  margin-right:5px;
+}

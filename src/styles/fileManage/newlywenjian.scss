@@ -1,0 +1,103 @@
+.wrapprSection {
+    .mainTitle {
+        position: relative;
+        z-index: 1;
+    }
+    >>> .leftMain{
+      width:390px;
+      top: 50px;
+      position: absolute;
+      bottom: 10px;
+      .leftMainCon{
+        top: 0;
+        bottom: 50px;
+        position: absolute;
+        overflow-y: auto;
+        width: 100%;
+        padding: 3px;
+        background: #fff;
+        padding: 20px 20px 30px 0;
+        .el-form-item {
+            margin-bottom: 20px;
+            .el-form-item__content{
+                .el-date-editor,.el-select{
+                    width: 100%;
+                }
+            }
+        }
+      } 
+    } 
+    >>> .contentbox{
+      left:410px
+    }
+    >>> .footBtn{
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+      background: #fff;
+      padding: 10px;
+      
+    }
+  } 
+  body {
+   .footBtn{
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+      background: #fff;
+      padding: 10px;
+      
+    }
+  } 
+  body {
+    .uploader-btn,.el-button.is-disabled:hover{
+      background: #2b87c6;
+    }
+  } 
+    .pdfbox{
+        background-color: rgb(172,172,172);
+        position:absolute;
+        width: 100%; 
+        left: 0;    
+        top:43px;
+        bottom: 45px;
+      }
+    .div1{
+        height:100%;
+        position: relative;
+        top:0;
+        cursor:pointer;
+        margin-top:10px;
+        overflow-y: auto;
+      }
+  
+  
+      .p2{
+        position: absolute;
+        color:#fff;
+        bottom:38px;
+        font-size:13px;
+      }
+  
+    .pImg{
+      width:48%;
+      height:96%;
+      margin: 0 1% 20px 1%;
+      float:left;
+      position: relative;
+    }
+    .pImg .ImgClass{
+      top:0;
+      bottom:60px;
+      position: absolute;
+      background:#fff;
+      width:100%;
+    }
+  
+    .pImg .ImgClass img{
+      width:100%;
+      height:100%;
+    }
+  

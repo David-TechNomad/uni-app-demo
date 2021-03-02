@@ -1,0 +1,69 @@
+
+.el-table th.gutter{
+  display: table-cell!important;
+}
+.el-table .el-checkbox__original{
+ display: none 
+}
+//解决 ie11 checkbox 右侧的...
+.el-checkbox__original{
+ width: auto ;
+ position: inherit;
+}
+.CollectionArchivesStatisticsView {
+  .el-table__body-wrapper {
+    overflow-y: auto;
+  }
+}
+.defaultTable {
+  margin-top: 3px;
+  td, th{
+    padding: 3px 0;
+    text-align: center;    
+  }
+  td{
+    font-size: 0.875rem;
+    color: #333;
+  }
+  .tableHeader th{
+     background-color: #2b87c6;
+     color: #fff;   
+  }
+}
+.tableInTab {
+  margin-top: 0px;
+  td, th{
+    padding: 3px 0;
+    text-align: center;    
+  }
+  td{
+    font-size: 0.875rem;
+    color: #333;
+  }
+  .tableHeader th{
+     background-color: #2b87c6;
+     color: #fff;   
+  }
+}
+.workFileManagementView,.workFileConfigView {
+  .fileShowView{
+    .defaultTable {
+      td, th{
+        text-align: left;    
+      }
+    }
+  }
+}
+.tableIcon{
+  font-size: 1.125rem!important;
+  color: #2b87c6;
+}
+
+// 树形表格样式修改
+.el-table .el-table__expand-icon {
+  display: inline-block;
+  width: 0px !important;
+  vertical-align: middle;
+  margin-right: 0px !important;
+  float: left;
+}

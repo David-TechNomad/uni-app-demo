@@ -1,0 +1,285 @@
+/**
+ * @css
+ * @分组及案卷管理
+ */
+section{
+  padding:0 10px;
+  height:100%;
+  overflow-y:hidden;
+  .main{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .left{
+    background-color: white;
+    position: absolute;
+    left: 1%;
+    right: 75%;
+    top: 1%;
+    bottom: 1%;
+    .top{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom:50px;
+      line-height:50px;
+      padding-left:10px;
+      //.littleTop{
+      //  position: absolute;
+      //  top: 30%;
+      //  left: 3%;
+      //}
+    }
+    .bottom{
+      position:absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 85px;
+      .bottomLittleTop{
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 3%;
+      }
+      .myTree{
+        position: absolute;
+        top: 16px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  .right{
+    background-color: white;
+    position: absolute;
+    left: 26%;
+    right: 1%;
+    top: 1%;
+    bottom: 1%;
+    .top{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height:50px;
+      line-height:50px;
+      padding-left:10px;
+      //.littleTop{
+      //  position: absolute;
+      //  top: 30%;
+      //  left: 3%;
+      //}
+    }
+    .bottom{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50px;
+      bottom: 0;
+    }
+  }
+  .div1{
+    border-bottom: 1px solid lightgrey;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .myCheck{
+    width: 100px;
+  }
+  .fontClass{
+    width:100px;
+    height:30px;
+    position:absolute;
+    top:12px;left:180px;
+    line-height:30px;
+    text-align:center;z-index:99;
+    i{
+      color:#428bca;
+      font-size:18px;
+      padding:0 3px;
+    }
+  }
+  .form .el-form-item__label{
+    margin-left: 5px !important;
+  }
+  .formFooter{
+    position: absolute;
+    left: 45%;
+    bottom: -10%;
+  }
+  .borderTable{
+    position: absolute;
+    left: 1%;
+    right: 1%;
+  }
+  .nthDivthree {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    .el-button--primary {
+      padding: 0 10px !important;
+    }
+    .el-button+.el-button{
+      margin-left: 5px;
+    }
+  }
+  .formDiv{
+    padding:5px 10px 0;
+    .resetnamePone{
+      height:30px;
+      line-height:30px;
+    }
+    .resetnamePtwo{
+      height: 30px;
+      line-height:30px;
+      margin-top:10px;
+      >span{
+        color: red;
+        font-weight:800;
+        margin-right:5px;
+      }
+    }
+  }
+  .myformDiv{
+    position: relative;
+    .resetnamediv{
+      position: absolute;
+      top:70px;
+      bottom:0;
+      right:10px;
+      left:10px;
+      overflow: auto;
+      .resettitle{
+        height:40px;
+        .resettitlepOne{
+          height:40px;
+          background: blue;
+          line-height: 40px;
+          text-align: center;
+          width:150px;
+          float: left;
+          color: #ffffff;
+        }
+        .resettitlepTwo{
+          height:40px;
+          background: blue;
+          line-height: 40px;
+          text-align: center;
+          width:150px;
+          float: left;
+          width:240px;
+          float: right;
+          color: #ffffff;
+        }
+      }
+      .resetdiv{
+        position: absolute;
+        top:40px;
+        bottom:0;
+        width:100%;
+        overflow: auto;
+        >p{
+          height:40px;
+          margin-bottom:5px;
+          line-height:40px;
+          >span{
+            float: left;
+            width:150px;
+            text-align: center;
+          }
+          .el-input{
+            float:right;
+            width:240px;
+            height:30px;
+            margin:5px 0;
+            line-height:30px!important;
+
+          }
+        }
+      }
+    }
+  }
+  .treeDiv{
+    position: absolute;
+    left: 1%;
+    top: 20%;
+    right: 1%;
+    bottom: 1%;
+  }
+  .spanDiv{
+    border-bottom: 1px solid lightgrey;
+    padding:10px 8%;
+  }
+  .innerTreeDiv{
+    position: absolute;
+    left: 10%;
+    right: 1%;
+    bottom: 1%;
+    top: 10%;
+    overflow-y: auto;
+  }
+  .oneDiv{
+    padding: 10px 0;
+    line-height: 20px;
+    .oneP{
+      margin-left: 7%;
+    }
+    .twoP{
+       margin-left: 15%;
+    }
+  }
+  .presentStore{
+    width: 33%;
+    height:100%;
+    border:1px solid #cccccc;
+    overflow-y:auto;
+    position: relative;
+    >P{
+      height:30px;
+      line-height: 30px;
+      border-bottom: 1px solid #cccccc;
+      padding-left: 10px;
+    }
+    .presentTree{
+      position: absolute;
+      width:100%;
+      top:35px;
+      bottom:0;
+      overflow: auto;
+    }
+  }
+  .targetDiv{
+    width: 66%;
+    height:100%;
+    border:1px solid #cccccc;
+    position: relative;
+    >P{
+      height:30px;
+      line-height: 30px;
+      border-bottom: 1px solid #cccccc;
+      padding-left: 10px;
+    }
+    .targetCompany{
+      width: 50%;
+      border-right:1px solid #cccccc;
+      position: absolute;
+      top: 30px;
+      bottom:0;
+      left:0;
+      overflow: auto;
+    }
+    .targetStore{
+      width: 50%;
+      position: absolute;
+      top: 30px;
+      bottom:0;
+      right:0;
+      overflow:auto;
+    }
+  }
+}

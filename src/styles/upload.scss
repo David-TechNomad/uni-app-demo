@@ -1,0 +1,50 @@
+// 公众用户上传样式修改 -----------start------------
+.userAddView .el-upload-list__item-name {
+    display: none;
+  }
+  
+  .userAddView{
+    .avatar-uploader .el-upload {
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .avatar-uploader .el-upload:hover {
+        border-color: #409EFF;
+      }
+      .avatar-uploader-icon {
+        font-size: 28px;
+        color: #8c939d;
+        width: 178px;
+        height: 178px;
+        line-height: 178px;
+        text-align: center;
+      }
+      .avatar {
+        width: 178px;
+        height: 178px;
+        display: block;
+      }
+  } 
+// 公众用户上传样式修改 -----------end------------
+
+// 云盘上传进度条样式修改 -----------start------------
+.uploadingView {
+  .el-progress-bar {
+    width: 97% !important;
+  }
+}
+// 云盘上传进度条样式修改 -----------end------------
+
+// 批量挂接上传进度条样式修改 -----------start------------
+.batchMountTaskView {
+  .el-progress-bar {
+    width: 97% !important;
+  }
+}
+// 批量挂接上传进度条样式修改 -----------end------------
+.el-upload-list__item:first-child{
+  margin-top: 10px !important;
+}

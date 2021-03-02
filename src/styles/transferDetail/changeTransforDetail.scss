@@ -1,0 +1,171 @@
+/**
+ * @css
+ * @检索结果
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    position:relative;
+    .mainTitle{
+      height:50px;
+      line-height:50px;
+      text-align:center;
+      color:#205092;
+      font-size:15px;
+      font-weight:700;
+      span{
+        font-size:18px;
+      }
+      button{
+        margin: 11px 7px;
+      }
+    }
+    .mainDoc{
+      position:absolute;
+      top:50px;
+      bottom:10px;
+      left:0;
+      right:0;
+      padding:0 12px 0 19px;
+      overflow-y:auto;
+      .mainCon{
+        background:#fff;
+        padding:10px;
+        margin:20px 0;
+        border-radius:2px;
+        border:1px solid #c8c8cb;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        .loanTipTitle{
+          position:relative;
+          padding:0 10px 0 15px;
+          .titleSect{
+            width:7px;
+            height:40px;
+            background:rgb(66,139,202);
+            position:absolute;
+            top:0;
+            left:-7px;
+            border-radius:4px 0 0 4px;
+          }
+        }
+        .waitTable{
+          padding:0 10px 10px;
+        }
+        .listTitle{
+          background:rgb(109,134,168);
+          color:#fff;
+          height:30px;
+          line-height:30px;
+          text-align:center;
+          width:100px;
+          border-radius:3px;
+        }
+        >ul li{
+          margin:15px 10px;
+        }
+        .borderTable{
+          margin-top:8px;
+        }
+      }
+      .applyDone{
+        text-align:center;
+        padding:0;
+      }
+      .basicList{
+        padding:0;
+        li{
+          line-height:20px;
+          padding-left:8px;
+        }
+        .basicForm{
+          margin:0;
+          .basicItem{
+  
+          }
+        }
+      }
+      .mainCon:first-of-type{
+        margin:0;
+      }
+    }
+    .checkModal{
+      .checkCon{
+        position: absolute;
+        bottom: 65px;
+        top: 40px;
+        left:10px;
+        right:10px;
+      }
+      .checkArea{
+        height:100%;
+        border:1px solid #ccc;
+        overflow-y:hidden;
+        position:relative;
+        .topCheckCon{
+          background:rgb(235,248,255);
+          padding:5px 10px;
+          line-height:40px;
+          height:50px;
+        }
+        .topCheckTree{
+          padding:0 10px;
+          overflow-y:auto;
+          position:absolute;
+          width:100%;
+          top:50px;
+          bottom:0;
+        }
+      }
+      .checkBottomRight{
+        padding:10px;
+      }
+      .checkBottomLeft{
+        padding:10px;
+      }
+    }
+    .fileTransferApplyAdd{
+      .addTablesearch{
+        height:40px;
+        .addTablesearchForm{
+          float:left;
+          .fileTransferApplyForm{
+            //width:100%;
+            //height:30px;
+            //overflow-y: auto;
+            //white-space: nowrap!important;
+            //.el-form-item{
+            //  height:40px;
+            //  //width:200px;
+            //  display:inline-block;
+            //  //margin-right:10px;
+            //}
+          }
+        }
+        >.checkWay{
+          margin-top:5px;
+          float: right;
+        }
+      }
+      .tableContainer{
+        position: absolute;
+        top:40px;
+        left:0;
+        right:0;
+        bottom:40px;
+      }
+      .pager{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        height:40px;
+        padding:4px 0;
+        .el-pagination{
+          margin-bottom:5px!important;
+          float: right;
+        }
+      }
+    }
+  }
+  

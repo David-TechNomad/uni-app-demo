@@ -1,0 +1,51 @@
+.fileLog{
+  height:100%;
+  position: relative;
+  padding:0 5px 0 10px;
+  .fileLogHeader{
+    height:50px;
+    line-height:50px;
+    padding:0 5px;
+    .checkWay{
+      float: right;
+      margin-top:10px;
+    }
+    >span{
+      color: #428bca;
+      //border-left:3px solid #428bca;
+      padding:0 10px;
+      line-height: 30px;
+      color: #428bca;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  .fileLogContain{
+    position: absolute;
+    top:50px;
+    left:10px;
+    right:5px;
+    bottom:5px;
+    background: #ffffff;
+    border:1px solid #cccccc;
+    padding:0 10px;
+    .fileLogContainForm{
+      height:35px;
+      margin-top:10px;
+    }
+    .fileLogContainTable{
+      position: absolute;
+      top:45px;
+      bottom:40px;
+      left:10px;
+      right:10px;
+      background:red;
+    }
+    .logpage{
+      position: absolute;
+      bottom: 0;
+      right: 5px;
+      padding:5px 0;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+/**
+ * @css
+ * @角色管理
+ */
+section{
+  padding:0 10px;
+  height:100%;
+  overflow-y:hidden;
+  .mainTitle{
+    line-height:50px;
+    height:50px;
+    color:rgb(66,139,202);
+    font-weight:500;
+    font-size:16px;
+    span{
+      padding:0 10px;
+      border-left:3px solid rgb(66,139,202);
+    }
+  }
+  .mainDoc{
+    position:absolute;
+    top:50px;
+    bottom:10px;
+    left:0;
+    right:0;
+    padding:0 10px;
+    background:#fff;
+    .doubleForm{
+      padding:10px;
+      background:#fff;
+    }
+    .borderTable{
+      padding:0 10px;
+      background:#fff;
+      position:absolute;
+      left:10px;
+      right:10px;
+    }
+    .mainCon{
+      height:100%;
+      .more{
+        font-size:12px;
+        position:absolute;
+        top:-5px;
+        right:10px;
+        color:#777;
+        cursor:pointer;
+        background:#fff;
+        border:1px solid #ccc;
+        border-radius:4px;
+        padding:3px;
+      }
+      .mainBorrowBottom{
+        background:rgb(249,249,249);
+      }
+    }
+  }
+  .btnDiv{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  .formData{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+  }
+  .formDiv{
+    padding:0px 10px;
+    height: 100%;
+    overflow-y:auto;
+  }
+  .big{
+    position: absolute;
+    right: 1%;
+    top:30%;
+  }
+  .formFooter{
+    position: absolute;
+    left: 45%;
+    bottom: -10%;
+  }
+  .checkModal{
+    .checkCon{
+      position: absolute;
+      bottom: 65px;
+      top: 40px;
+      left:10px;
+      right:10px;
+    }
+    .checkArea{
+      height:100%;
+      border:1px solid #ccc;
+      overflow-y:auto;
+      .topCheckCon{
+        background:rgb(235,248,255);
+        padding:5px 10px;
+        line-height:40px;
+        height:50px;
+      }
+      .topCheckTree{
+        padding:0 10px;
+        overflow-y:auto;
+        position:absolute;
+        width:50%;
+        top:50px;
+        bottom:52%;
+      }
+    }
+    .checkBottomRight{
+      padding:10px;
+    }
+    .checkBottomLeft{
+      padding:10px;
+    }
+  }
+  .left{
+    border: 1px solid lightgrey;
+    position: absolute;
+    left: 5%;
+    right: 53%;
+    top: 5px;
+    bottom: 20px;
+    overflow:scroll;
+  }
+  .right{
+    border: 1px solid lightgrey;
+    position: absolute;
+    left: 53%;
+    right: 5%;
+    top: 5px;
+    bottom: 20px;
+    overflow:scroll;
+  }
+  .thisTitle{
+    text-align: center;
+  }
+  .up_fondTitle{
+    margin-left: 5%;
+  }
+  .thisBig{
+    position: absolute;
+    right: 2%;
+    top: 30%;
+  }
+  .spanDiv{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+  }
+.bigJing{
+  position: absolute;
+  left: 92%;
+  bottom: 30%;
+}
+  .myInput{
+    width: 140px;
+  }
+}

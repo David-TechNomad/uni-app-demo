@@ -1,0 +1,103 @@
+.enterstore{
+  margin-left:2px;
+  height:100%;
+  position:relative;
+  position: relative;
+}
+.enterstore .conbinefile{
+  height:50px;
+  margin-right:5px;
+  line-height:50px;
+  >span{
+    margin-left:8px;
+    color: #428bca;
+    //border-left:3px solid #428bca;
+    padding:0 10px;
+    line-height: 50px;
+    color: #428bca;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+.enterstore .conbinefile .checkWay{
+  float: right;
+  margin-top:10px;
+}
+.enterstore .combinetable{
+  position: absolute;
+  top:50px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+  .combinetableL{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:257px;
+    border:1px solid #cccccc;
+    background: #ffffff;
+    .sort{
+      height:40px;
+      border-bottom:1px solid #cccccc;
+      padding:0 5px;
+      line-height:40px;
+      .el-button{
+        float: right;
+        margin-top:5px;
+      }
+    }
+    .enterstoreTable{
+      position: absolute;
+      top:40px;
+      bottom:0;
+      left:5px;
+      right:5px;
+    }
+  }
+  .combinetableR{
+    width:247px;
+    height:100%;
+    float: right;
+    border:1px solid #cccccc;
+    background: #ffffff;
+    position:relative;
+    >p{
+      height:40px;
+      line-height: 40px;
+      padding-left:5px;
+      border-bottom:1px solid #cccccc;
+    }
+    .enterTree{
+      position:absolute;
+      top:40px;
+      bottom:120px;
+      width:100%;
+      padding:0 10px;
+      overflow-y:auto;
+    }
+    .combinetableRB{
+      height:120px;
+      width:100%;
+      padding:0 10px;
+      position:absolute;
+      bottom:0;
+      border-top:1px solid #cccccc;
+      text-align:center;
+      .el-input{
+        margin-top:5px;
+      }
+      >p{
+        font-size:12px;
+        color: #666666;
+        margin-top:5px;
+        height:40px;
+        line-height:20px;
+        text-align:left;
+      }
+      .el-button{
+        margin-top:5px;
+      }
+    }
+  }
+}

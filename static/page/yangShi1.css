@@ -1,0 +1,152 @@
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.main{
+	
+}
+.mainTitle{
+    height: 50px;
+    line-height: 50px;
+    color: #205092;
+    font-size: 15px;
+    font-weight: 700;
+}
+.mainCon:first-of-type {
+    margin: 0;
+}
+.mainDoc {
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 12px 0 19px;
+    overflow-y: auto;
+}
+
+.mainCon {
+    background: #fff;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 2px;
+    border: 1px solid #c8c8cb;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.loanTipTitle {
+    border-radius: 3px 3px 0 0;
+    padding: 0 15px;
+    background: #efeff0;
+    background: -o-linear-gradient(bottom,#efeff0,#fafafa);
+    filter: progid:dximagetransform.microsoft.gradient(startColorStr="#e3e3e3",EndColorStr="#ffffff");
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa',EndColorStr='#efeff0')";
+    color: #303133;
+    height: 40px;
+    line-height: 40px!important;
+    border-bottom: 1px solid #c8c8cb;
+    font-weight: 600;
+}
+
+.basicList {
+    padding: 0;
+}
+.rowsForm{
+    padding: 10px;
+	height: 230px;
+}
+.rowsForm .bg-purple:first-child {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.el-row {
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+	height:35px;
+}
+.el-col-3 {
+    width: 12.5%;
+	float: left;
+    box-sizing: border-box;
+}
+.el-col-5 {
+    width: 20.83333%;
+	float: left;
+    box-sizing: border-box;
+}
+.el-col-21 {
+    width: 87.5%;
+	float: left;
+    box-sizing: border-box;
+}
+.grid-content {
+    border-radius: 0;
+    height: 35px;
+    padding-right: 10px;
+}
+
+
+.bg-purple {
+    background: #ebebeb;
+    text-align: right;
+    border: 1px solid #ccc;
+    border: 0;
+}
+.bg-purple-light:first-child {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.rowsForm .grid-content1 {
+    border-radius: 0;
+    height: 60px;
+    padding-right: 10px;
+    border: 1px solid #ccc;
+}
+.bg-purple-light {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.span1 {
+    position: relative;
+    left: 0;
+    top: 10px;
+    display: inline-block;
+}
+.span2 {
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+.mainDoc .mainCon .loanTipTitle .titleSect{
+    width: 7px;
+    height: 40px;
+    background: #428bca;
+    position: relative;
+    top: 0px;
+    left: -15px;
+    border-radius: 4px 0 0 4px;
+	float:left;
+}
+.el-button {
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    background: #428bca;
+    background: -o-linear-gradient(bottom,#1169b4,#77b2e5);
+    /* filter: progid:dximagetransform.microsoft.gradient(startColorStr="#e3e3e3",EndColorStr="#ffffff"); */
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa',EndColorStr='#efeff0')"; */
+	
+	height: 30px;
+	margin-left: 10px;
+	padding: 0 20px!important;
+}
+
+

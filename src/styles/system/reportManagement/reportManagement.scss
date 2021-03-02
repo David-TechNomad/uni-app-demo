@@ -1,0 +1,123 @@
+/**
+ * @css
+ * @我的借阅
+ */
+section{
+  padding:0 10px;
+  height:100%;
+  overflow-y:hidden;
+  .mainTitle{
+    height:50px;
+    line-height:50px;
+  }
+  .mainDoc{
+    position:absolute;
+    top:50px;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:0 10px;
+    .mainCon{
+      background:#fff;
+      height:100%;
+      padding:10px;
+      .more{
+        font-size:12px;
+        position:absolute;
+        top:10px;
+        right:20px;
+        color:#777;
+        cursor:pointer;
+      }
+      .borderTable{
+        margin-top:50px;
+      }
+    }
+  }
+  .btnDiv{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+  .basicItem{
+    margin-left: 5%;
+  }
+  .formDiv{
+    padding:0px 10px;
+
+  }
+  .formFooter{
+    position: absolute;
+    left: 45%;
+    bottom: -10%;
+  }
+  
+  
+  .addfile{
+  border-bottom:0;
+}
+.addfile .el-form-item{
+  height:30px;
+  margin-bottom:14px!important;
+}
+.addfile .el-form-item .el-form-item__label{
+  height:30px;
+  line-height: 30px;
+  padding-left:3px!important;
+  padding-right:5px;
+}
+.addfile .el-form-item .el-form-item__content{
+  height:30px;
+  vertical-align: middle;
+  line-height:30px;
+}
+.addfile .textareaItem {
+  height:65px;
+}
+.addfile .textareaItem .el-form-item__content{
+  height:65px;
+  width:260px;
+  margin-left:5px;
+}
+.addfile .el-form-item .el-form-item__content .el-textarea{
+  margin-left:5px;
+  height:65px;
+  overflow: auto;
+}
+.addfile .el-form-item .el-form-item__content .el-textarea .el-textarea__inner{
+  height:65px;
+  padding:5px!important;
+}
+.addfile .el-form-item .el-form-item__content .el-input{
+  height:30px!important;
+  vertical-align: auto;
+  line-height:30px;
+  margin-left:5px;
+}
+.addfile .el-form-item .el-form-item__content .el-select{
+  width:260px;
+}
+
+.addfile .el-form-item .el-form-item__content .el-input .el-input__inner{
+  height:30px;
+  line-height:30px!important;
+  width:260px;
+  padding:0  0 0 5px!important;
+}
+//addfile表格验证信息的位置
+.addfile .is-error .el-form-item__content .el-form-item__error{
+  padding:8px 0 0 5px!important;
+}
+.addfiles .is-error .el-form-item__content .el-form-item__error{
+  padding:3px 0 0 60px!important;
+}
+.addfileSelet .is-error .el-form-item__content .el-form-item__error{
+  padding:8px 0 0 80px!important;
+}
+.addfileHouse .is-error .el-form-item__content .el-form-item__error{
+  padding:0px 0 0 80px!important;
+}
+.addfile .textareaItem .el-form-item__content .el-form-item__error{
+  padding-top:19px!important;
+}
+}

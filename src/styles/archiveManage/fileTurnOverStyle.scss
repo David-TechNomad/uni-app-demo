@@ -1,0 +1,189 @@
+.fileTurnOver{
+  height:100%;
+  padding:0 10px;
+  position: relative;
+  .fileTurnOverHeader{
+    height:50px;
+    line-height:50px;
+    .checkWay{
+      float:right;
+      margin-top:10px;
+    }
+    >span{
+      color: #428bca;
+      //border-left:3px solid #428bca;
+      padding:0 10px;
+      line-height: 50px;
+      color: #428bca;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  .fileTurnOverContain{
+    position:absolute;
+    top:50px;
+    right:10px;
+    bottom:5px;
+    left:10px;
+    .fileTurnOverL{
+      position: absolute;
+      left:0;
+      right:500px;
+      height:100%;
+      border:1px solid #cccccc;
+      background: #ffffff;
+      .fileTurnOverLheader{
+        height:40px;
+        line-height:30px;
+        padding:5px;
+        border-bottom:1px solid #cccccc;
+        >span{
+          float:left;
+        }
+        .el-checkbox-group{
+          float:left;
+          height:30px;
+          margin-left:10px;
+        }
+        .fileTurnOverLButton {
+          float: right;
+        }
+      }
+      .fileTurnOverLTable{
+        position: absolute;
+        top:45px;
+        left:5px;
+        right:5px;
+        bottom:0;
+      }
+    }
+    .fileTurnOverR{
+      position: absolute;
+      right:0;
+      width:497px;
+      height:100%;
+      border:1px solid #cccccc;
+      background: #ffffff;
+      .fileTurnOverRT{
+        height:50px;
+        padding:10px 5px;
+        line-height:30px;
+        border-bottom: 1px solid #cccccc;
+        .checkWay{
+          float: right;
+        }
+      }
+      .treeL{
+        width:254px;
+        position: absolute;
+        top:50px;
+        bottom:0;
+        border-right:1px solid #cccccc;
+        .treeOne{
+          width:254px;
+          height:100%;
+          position: relative;
+          .treeTitle{
+            height: 50px;
+            line-height: 50px;
+            padding: 5px 0;
+          }
+          .treeCon{
+            position:absolute;
+            top:50px;
+            bottom:0;
+            overflow-y:auto;
+            width:100%;
+            padding:3px;
+          }
+        }
+      }
+      .treeR{
+        width:236px;
+        position: absolute;
+        top:50px;
+        right:0;
+        bottom:0;
+        overflow-y: auto;
+      }
+    }
+  }
+  .checkModal{
+    .checkCon{
+      position: absolute;
+      bottom: 65px;
+      top: 40px;
+      left:10px;
+      right:10px;
+    }
+    .checkArea{
+      height:100%;
+      border:1px solid #ccc;
+      overflow-y:hidden;
+      position:relative;
+      .topCheckCon{
+        background:rgb(235,248,255);
+        padding:5px 10px;
+        line-height:40px;
+        height:50px;
+      }
+      .topCheckTree{
+        padding:0 10px;
+        overflow-y:auto;
+        position:absolute;
+        width:100%;
+        top:50px;
+        bottom:0;
+      }
+    }
+    .checkBottomRight{
+      padding:10px;
+    }
+    .checkBottomLeft{
+      padding:10px;
+    }
+  }
+  .fileTransferApplyAdd{
+    .addTablesearch{
+      height:70px;
+      .addTablesearchForm{
+        //float:left;
+        .fileTransferApplyForm{
+          //width:100%;
+          //height:30px;
+          //overflow-y: auto;
+          //white-space: nowrap!important;
+          //.el-form-item{
+          //  height:40px;
+          //  //width:200px;
+          //  display:inline-block;
+          //  //margin-right:10px;
+          //}
+        }
+      }
+      >.checkWay{
+        margin-top:5px;
+        float: right;
+      }
+    }
+    .tableContainer{
+      position: absolute;
+      top:70px;
+      left:0;
+      right:0;
+      bottom:40px;
+    }
+    .pager{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      height:40px;
+      padding:4px 0;
+      .el-pagination{
+        margin-bottom:5px!important;
+        float: right;
+      }
+    }
+  }
+}

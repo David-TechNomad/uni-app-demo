@@ -1,0 +1,40 @@
+section{
+  height:100%;
+  padding:0 5px;
+  position: relative;
+    .checkTitle{
+      height:50px;
+      padding:10px 5px 0 0;
+      border-bottom:1px solid #cccccc;
+          .el-button{
+            float: right;
+          }
+      >span{
+          color: #428bca;
+          //border-left:3px solid #428bca;
+          padding:0 10px;
+          line-height: 30px;
+          color: #428bca;
+          font-weight: 500;
+          font-size: 16px;
+      }
+    }
+    .checkTable{
+      position: absolute;
+      top:50px;
+      left:5px;
+      right:5px;
+      bottom:10px;
+      padding:0 5px;
+      background: #ffffff;
+      overflow-y: auto;
+          .tableCaption{
+            height:50px;
+            line-height:50px;
+            >span{
+              font-weight:500;
+              color: red;
+            }
+          }
+    }
+}

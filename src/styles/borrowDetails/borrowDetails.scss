@@ -1,0 +1,143 @@
+/**
+ * @css
+ * @检索结果
+ */
+section{
+  padding:0 10px;
+  height:100%;
+  overflow-y:hidden;
+  position:relative;
+  .mainTitle{
+    height:50px;
+    line-height:50px;
+  }
+  .mainDoc{
+    position:absolute;
+    top:50px;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:0 10px;
+    overflow-y:auto;
+    .mainCon{
+      background:#fff;
+      padding:10px;
+      margin:15px 0;
+      .listTitle{
+        background:rgb(109,134,168);
+        color:#fff;
+        height:30px;
+        line-height:30px;
+        text-align:center;
+        width:200px;
+      }
+      .borderTable{
+        margin-top:8px;
+      }
+    }
+    .basicList{
+      .basicForm{
+        margin:15px 10px 5px;
+        .basicItem{
+          margin-left:5%;
+        }
+      }
+    }
+    .basicList1{
+      height:70px;
+      border: 1px solid #0094ff;;
+      margin:0px 0px 5px;
+    }
+    .mainCon:first-of-type{
+      margin:0;
+    }
+  }
+
+  .el-row {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 0px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+    border-radius: 20px;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 0px;
+    min-height: 36px;
+    max-height: 36px;
+  }
+  .grid-content1 {
+       border-radius: 0px;
+       min-height: 72px;
+   }
+  .grid-content2 {
+    border-radius: 0px;
+    min-height: 36px;
+    max-height: 36px;
+    margin-top:1.5%;
+    margin-left:5%;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+.span1{
+  position:relative;
+  left:10px;
+  top:10px;
+}
+.span2{
+  position:relative;
+  left:5%;
+  //top:10px;
+  line-height: 36px;
+}
+.span{
+  position:relative;
+  left:2px;
+  top:10px;
+}
+
+  .el-header, .el-footer {
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+
+  .el-main {
+    color: #333;
+    text-align: center;
+    line-height: 160px;
+  }
+
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
+}

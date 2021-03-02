@@ -1,0 +1,147 @@
+/**
+ * @css
+ * @检索结果
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    position:relative;
+    .mainTitle{
+      height:50px;
+      line-height:50px;
+      margin-top:40px;
+      padding: 0 5px;
+      background: #fff;
+      width:267px;
+      border: radius 3px 3pd 0 0;
+    }
+    .inputSearch>i{
+      position: absolute;
+      top:88px;
+      left:238px;
+      z-index:1000;
+    }
+    .mainDoc{
+      position:absolute;
+      top:34px;
+      bottom:18px;
+      left:272px;
+      right:0;
+      padding:0 10px;
+      .mainCon{
+        background:#fff;
+        height:100%;
+        padding:10px;
+        margin-top:8px;
+        .more{
+          // font-size:12px;
+          // position:absolute;
+          // top:18px;
+          // right:20px;
+          // color:#777;
+          // cursor:pointer;
+          font-size:12px;
+        position:absolute;
+        top:12px;
+        right:20px;
+        color:#777;
+        cursor:pointer;
+        background:#fff;
+        border:1px solid #ccc;
+        border-radius:4px;
+        padding:3px;
+        }
+        .lendCar{
+          margin:5px 0;
+        }
+        .result{
+          float:left;
+          height: 25px;
+          line-height: 25px;
+          margin: 7px 0 0 20px;
+          padding-right:15px;
+          border-right: 1px solid #888;
+        }
+        .SearchBack{
+          margin-top:3px;
+        } 
+        .borderTable{
+          margin-top:8px;
+        }
+      }
+    }
+  }
+  .basicItem,.SelectItem{
+   margin-left:2%;
+  }
+ .inputWidth{
+   margin-right:5% !important;
+ }
+ .formDiv{
+   margin-top:10px;
+ }
+ .formData .el-tabs--card>.el-tabs__header .el-tabs__item{
+  &:nth-child(3){
+    position: relative;
+    left:370px
+  }
+  &:nth-child(4){
+    position: relative;
+    left:370px
+  }
+ }
+ .copyUpload{
+   position: absolute;
+   right:24px;
+   top:61px;
+ }
+ .storeTitle{
+   margin-left:5%;
+   margin-bottom:7px;
+ }
+ .titleBlue{
+   width:99%;
+   height:30px;
+   margin:10px 0;
+   position: absolute;
+   color:#7ca9d6;
+   font-size: 16px;
+   font-weight:800;
+   padding: 3px 15px;
+   b{
+     width:5px;
+     height:18px;
+     background: #7ca9d6;
+     position: absolute;
+     left:0;
+     top:3px;
+   }
+
+ }
+ @media screen and (max-width: 900px) {
+  .more{
+    margin-top:-37px !important;
+  }
+  }
+  @media screen and (min-width:800px)and(max-width:1050px) {
+    .tableSerach-one{
+       position:absolute;
+       top:150px;
+       left:20px;
+    }
+    .tableBottom{
+      margin-bottom:30px
+    }
+}
+  @media screen and (min-width:600px)and(max-width:799px) {
+    .tableSerach-one{
+       position:absolute;
+       top:180px;
+       left:20px;
+    }
+    .tableBottom{
+      margin-bottom:35px
+    }
+}
+

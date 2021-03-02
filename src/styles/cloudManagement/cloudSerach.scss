@@ -1,0 +1,57 @@
+/**
+ * @css
+ * @检索结果
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    position:relative;
+    .mainTitle{
+      height:50px;
+      line-height:50px;
+    }
+    .mainDoc{
+      position:absolute;
+      top:50px;
+      bottom:10px;
+      left:0;
+      right:0;
+      padding:0 10px;
+      .mainCon{
+        background:#fff;
+        height:100%;
+        padding:10px;
+        .lendCar{
+          margin:5px 0;
+        }
+        .result{
+          float:left;
+          height: 25px;
+          line-height: 25px;
+          margin: 7px 0 0 20px;
+          padding-right:15px;
+          border-right: 1px solid #888;
+        }
+        .SearchBack{
+          margin-top:3px;
+        }
+        .more{
+          font-size:12px;
+          position:absolute;
+          top:15px;
+          right:20px;
+          color:#777;
+          cursor:pointer;
+        }
+        .borderTable{
+          margin-top:8px;
+        }
+      }
+    }
+  }
+.titleSpan{
+    display:inline-block;
+    padding:2px 5px;
+    line-height: 18px;
+}

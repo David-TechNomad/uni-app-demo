@@ -1,0 +1,105 @@
+/**
+ * @css
+ * @新增项目档案
+ */
+section{
+  padding:0 10px;
+  height:100%;
+  overflow-y:hidden;
+  .mainTitle{
+    height:50px;
+    line-height:50px;
+  }
+  .mainDoc{
+    position:absolute;
+    top:50px;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:0 10px;
+    .mainCon{
+      background:#fff;
+      height:100%;
+      padding:10px;
+      .more{
+        font-size:12px;
+        position:absolute;
+        top:10px;
+        right:20px;
+        color:#777;
+        cursor:pointer;
+      }
+      .borderTable{
+        margin-top:12px;
+      }
+    }
+  }
+  .btnDiv{
+    position: absolute;
+    right: 10px;
+    top: -35px;
+  }
+  .basicItem{
+    margin-left: 5%;
+  }
+  .formDiv{
+    padding:0px 10px;
+
+  }
+  .formFooter{
+    position: absolute;
+    left: 45%;
+    bottom: -10%;
+  }
+  .left{
+    width: 280px;
+    height: 100%;
+    //background-color: lightgrey;
+    cursor:pointer;
+  }
+  .leftTop{
+    position:absolute;
+    top: 0px;
+    bottom: 60px;
+  }
+  .leftBottom{
+    position:absolute;
+    bottom: 0px;
+    left: 140px;
+  }
+  .right{
+    background-color: grey;
+    position:absolute;
+    right:20px;
+    left: 320px;
+    top: 0;
+    bottom: 40px;
+    color:#777;
+    cursor:pointer;
+  }
+  .rightTop{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+  }
+  .rightMiddle{
+    background-color: lightgrey;
+    position:absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 10px;
+    right: 60%;
+  }
+  .rightBottom{
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+  }
+  .bigRightBottom{
+    position:absolute;
+    left: 320px;
+    bottom: 0;
+  }
+}

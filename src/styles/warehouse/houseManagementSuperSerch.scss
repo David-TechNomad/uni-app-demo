@@ -1,0 +1,61 @@
+/**
+ * @css
+ * @高级检索结果
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    position:relative;
+    .tree{
+      position:absolute;
+      top:50px;
+      bottom:10px;
+      background:#fff;
+      padding:10px;
+      overflow-y:auto;
+      border:1px solid #f9fcf9;
+      border-bottom: none;
+      border-right:none;
+      border-right:5px solid #f2f4f9;
+      // margin-left:5px;
+    }
+    .fontClass{
+      width:100px;
+      height:30px;
+      position:absolute;
+      top:48px;
+      left:180px;
+      line-height:30px;
+      text-align:center;z-index:99;
+      i{
+        color:#428bca;
+        font-size:18px;
+        padding:0 3px;
+      }
+    }
+    .treeOne{
+      width:270px;
+    }
+    .search{
+      position:absolute;
+      top:0;
+      left:280px;
+      right:0;
+      bottom:0;
+    }
+  }
+  .cloudAdd{
+    span{
+      display:inline-block;
+      float:left;
+    }
+    li{
+      float:right;
+      margin-right:10px;
+      width:158px;
+    }
+   }
+   .titleSpan{
+     line-height: 26px;
+   }

@@ -1,0 +1,61 @@
+.copymodel{
+  height:100%;
+  background: #cccccc;
+  position: relative;
+}
+.headerRow{
+  padding:10px 0;
+}
+.headerRow .el-button{
+  float: right;
+  margin-right:10px;
+}
+.copymodel .el-container{
+  position:absolute;
+  top:50px;
+  left:5px;
+  right:0;
+  bottom: 0;
+}
+.copymodel .el-container .el-aside{
+  width:150px!important;
+  background: #ffffff;
+  border:1px solid #cccccc;
+}
+.copymodel .el-container .el-aside p{
+  height:30px;
+  line-height:30px;
+  padding-left:20px;
+}
+.copymodel .el-container .el-aside ul{
+  width:120px;
+  height:85%;
+  margin:0 auto;
+  border:1px solid #cccccc;
+}
+.copymodel .el-container .el-aside ul li{
+  background: #F0F0F0;
+  border-bottom:1px solid #cccccc;
+  height:25px;
+  line-height:25px;
+  padding-left:10px;
+  cursor: pointer;
+}
+.copymodel .lifocus{
+  background: #97B3E3!important;
+  color: #ffffff !important;
+}
+.copymodel .el-container .el-main{
+  padding:0 5px 5px!important;
+}
+.copymodel .el-container .el-main>div{
+  height:100%;
+  background: #ffffff;
+}
+.copymodel .el-container .el-main>div .el-row{
+  padding:10px 5px;
+}
+.copymodel .el-container .el-main>div .el-row .el-button{
+  float: right;
+  margin-left:5px;
+}

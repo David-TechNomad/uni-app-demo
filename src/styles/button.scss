@@ -1,0 +1,77 @@
+.el-button{
+  font-size:0.875rem; 
+}
+.el-button.defaultBtn{ 
+  padding:8px 15px;
+  border-radius: 2px;
+  color:#fff;
+  text-align:center; 
+  border:none;
+  background: #2b87c6; 
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=120,strength=2);/*ie*/
+  -moz-box-shadow: 2px 2px 2px #cccccc;/*firefox*/
+  -webkit-box-shadow: 2px 2px 2px #cccccc;/*safari或chrome*/
+  box-shadow:2px 2px 2px #cccccc;/*opera或ie9*/
+}
+.el-button.defaultBtn:active,
+.el-button.defaultBtn:visited,
+.el-button.defaultBtn:focus,
+.el-button.indexdefaultBtnWay:hover{
+  color:#fff;
+  text-align:center; 
+  border:none;
+  background: #2b87c6; 
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=120,strength=2);/*ie*/
+  -moz-box-shadow: 2px 2px 2px #cccccc;/*firefox*/
+  -webkit-box-shadow: 2px 2px 2px #cccccc;/*safari或chrome*/
+  box-shadow:2px 2px 2px #cccccc;/*opera或ie9*/
+}
+
+.el-button.tabletoolBtn{
+  font-size: 0.75rem;
+  padding:4px 8px; 
+  border-radius:2px;
+  text-align:center;
+  border:1px solid #c8c8cb;
+  background: #efeff0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, #ffffff));
+  background: -ms-linear-gradient(bottom, #efeff0, #ffffff);
+  background: -moz-linear-gradient(center bottom, #efeff0 0%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #efeff0, #ffffff);
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#eee,direction=120,strength=2);/*ie*/
+  -moz-box-shadow: 2px 2px 2px #eee;/*firefox*/
+  -webkit-box-shadow: 2px 2px 2px #eee;/*safari或chrome*/
+  box-shadow:2px 2px 2px #eee;/*opera或ie9*/
+}
+
+.el-button.redBtn,.el-button.grenBtn,.el-button.blueBtn{ 
+  padding:8px 15px;
+  border-radius: 2px; 
+  text-align:center;   
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=120,strength=2);/*ie*/
+  -moz-box-shadow: 2px 2px 2px #cccccc;/*firefox*/
+  -webkit-box-shadow: 2px 2px 2px #cccccc;/*safari或chrome*/
+  box-shadow:2px 2px 2px #cccccc;/*opera或ie9*/
+}
+.el-button.redBtn{ 
+  color:#FF3A3A; 
+  border:1px solid #FF3A3A;
+  background: #fff;  
+}
+.el-button.grenBtn{ 
+  color:#fff; 
+  border:1px solid #00A01E;
+  background: #00A01E;  
+}
+.el-button.blueBtn{ 
+  color:#2B87C6; 
+  border:1px solid #2B87C6;
+  background: #fff;  
+}
+.el-button.primaryBtn{ 
+  padding:8px 15px;
+  border-radius: 2px;
+  color:#101010;; 
+  border:1px solid #bbb;
+  background: #fff;  
+}

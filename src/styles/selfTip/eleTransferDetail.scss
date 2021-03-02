@@ -1,0 +1,413 @@
+///**
+// * @css
+// * @检索结果
+// */
+// section{
+//    padding:0 10px;
+//    height:100%;
+//    overflow-y:hidden;
+//    position:relative;
+//    .mainTitle{
+//      height:50px;
+//      line-height:50px;
+//    }
+//    .mainDoc{
+//      position:absolute;
+//      top:-5px;
+//      bottom:0;
+//      left:0;
+//      right:0;
+//      padding:0 10px;
+//      overflow-y:auto;
+//      .mainCon{
+//        background:#fff;
+//        margin:10px 0;
+//        border-radius:2px;
+//        // border:1px solid #c8c8cb;
+//        // box-shadow: 0 0 10px rgba(0,0,0,0.2);
+//        .loanTipTitle{
+//          position:relative;
+//          // padding: 10px 0 15px;
+//          border:0;
+//          color:#7ca9d6;
+//          background: #f2f4f9;
+//          font-size: 16px;
+//          line-height:40px;
+//          .titleSect{
+//            width:5px;
+//            height:20px;
+//            background:rgb(66,139,202);
+//            position:absolute;
+//            top:10px;
+//            left:5px;
+//            // border-radius:4px 0 0 4px;
+//          }
+//        }
+//      }
+//    }
+//
+//    .el-row {
+//      margin-bottom: 0px;
+//      z-index: 1;
+//    }
+//    .el-col {
+//      border-radius: 0px;
+//      z-index: 1;
+//    }
+//    .bg-purple {
+//      background: #ebebeb;
+//      border:1px solid #ccc;
+//      border-top:0;
+//      border-right:0;
+//    }
+//    .bg-purple-light {
+//      background: #fff;
+//      border:1px solid #ccc;
+//      border-top:0;
+//      border-right:0;
+//    }
+//    .grid-content {
+//      border-radius: 0px;
+//      min-height: 28px;
+//    }
+//  .span1{
+//    position:relative;
+//    left:10px;
+//    top:10px;
+//
+//  }
+//  .span2{
+//    position:relative;
+//    left:20px;
+//    top:10px;
+//
+//  }
+//  .contentDiv2{
+//      position:absolute;
+//      left:68%;
+//      top:1%;
+//    }
+//  .contentDiv1{
+//      background-color: white;
+//      width: 97%;
+//      height:90%;
+//      position:relative;
+//      left:1.5%;
+//      bottom:-5%;
+//    }
+//  .contentDiv{
+//      background-color: lightgrey;
+//      width: 75%;
+//      height:87%;
+//      position:absolute;
+//      left:280px;
+//      top:0;
+//    }
+//  .singleDiv{
+//      background-color: lightgrey;
+//      width: 70%;
+//      height:90%;
+//      position:absolute;
+//      right:10px;
+//      top:2.7%;
+//    }
+//  .div1{
+//      background-color: #fff;
+//      width: 45%;
+//      height:85%;
+//      position: absolute;
+//      left: 2%;
+//      bottom:9%;
+//      cursor:pointer;
+//    }
+//    .div2{
+//      background-color: #fff;
+//      width: 45%;
+//      height:85%;
+//      position: absolute;
+//      right: 2.5%;
+//      bottom:9%;
+//      z-index: 0;
+//      cursor:pointer;
+//    }
+//    .div11{
+//      position: absolute;
+//      right: 53%;
+//      top:92%;
+//    }
+//    .div22{
+//      position: absolute;
+//      right: 2.5%;
+//      top:92%;
+//    }
+//    .p1{
+//      position: relative;
+//      top:2%;
+//      left: 2%;
+//    }
+//    .p2{
+//      position: relative;
+//      top:91%;
+//      left: 2%;
+//    }
+//    .p3{
+//      position: absolute;
+//      top:94%;
+//      right: 36.5%;
+//    }
+//    .fixModal{
+//      overflow:hidden;
+//      position:absolute;
+//      top:45px;
+//      right:0;
+//      left:5px;
+//      bottom:0;
+//      margin:0;
+//      border-radius:0;
+//    }
+//  }
+//  .formList{
+//    width:94%;
+//    height:90%;
+//    overflow: auto;
+//    margin-top:15px;
+//  }
+//  .rowBox{
+//    width:300px;
+//    height:90%;
+//  }
+
+/**
+ * @css
+ * @检索结果
+ */
+.WjDetail{
+  padding:0 10px;
+  height:100%;
+  overflow-y:hidden;
+  position:relative;
+  .mainTitle{
+    line-height:50px;
+    height:50px;
+    color:rgb(66,139,202);
+    font-weight:500;
+    font-size:16px;
+    span{
+      padding:0 10px;
+      border-left:3px solid rgb(66,139,202);
+    }
+  }
+  .mainDoc{
+    position:absolute;
+    top:-5px;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:0 10px;
+    overflow-y:auto;
+    .mainCon{
+      background:#fff;
+      margin:10px 0;
+      border-radius:2px;
+      // border:1px solid #c8c8cb;
+      // box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      .loanTipTitle{
+        position:relative;
+        // padding: 10px 0 15px;
+        border:0;
+        color:#7ca9d6;
+        background: #f2f4f9;
+        font-size: 16px;
+        line-height:40px;
+        .titleSect{
+          width:5px;
+          height:20px;
+          background:rgb(66,139,202);
+          position:absolute;
+          top:10px;
+          left:5px;
+          // border-radius:4px 0 0 4px;
+        }
+      }
+    }
+  }
+
+  .el-row {
+    margin-bottom: 0px;
+    z-index: 1;
+  }
+  .el-col {
+    border-radius: 0px;
+    z-index: 1;
+  }
+  .bg-purple {
+    background: #ebebeb;
+    border:1px solid #ccc;
+    border-top:0;
+    border-right:0;
+  }
+  .bg-purple-light {
+    background: #fff;
+    border:1px solid #ccc;
+    border-top:0;
+    border-right:0;
+  }
+  .grid-content {
+    border-radius: 0px;
+    min-height: 28px;
+  }
+  .span1{
+    position:relative;
+    left:10px;
+    top:10px;
+
+  }
+  .span2{
+    position:relative;
+    left:20px;
+    top:10px;
+
+  }
+  .contentDiv2{
+    position:absolute;
+    left:68%;
+    top:1%;
+  }
+  .contentDiv1{
+    background-color: white;
+    width: 97%;
+    height:90%;
+    position:relative;
+    left:1.5%;
+    bottom:-5%;
+  }
+  .contentDiv{
+    background-color: lightgrey;
+    width: 75%;
+    height:87%;
+    position:absolute;
+    left:280px;
+    top:0;
+  }
+  .singleDiv{
+    background-color: rgb(172,172,172);
+    position:absolute;
+    left:440px;
+    top:0;
+    bottom: 10px;
+    right:10px;
+    border-radius:4px;
+  }
+  .div1{
+    height:100%;
+    position: relative;
+    top:0;
+    cursor:pointer;
+    margin-top:10px;
+    overflow-y: auto;
+  }
+  .div2{
+    background-color: #fff;
+    width: 45%;
+    height:85%;
+    position: absolute;
+    right: 2.5%;
+    bottom:9%;
+    z-index: 0;
+    cursor:pointer;
+  }
+  .div11{
+    position: absolute;
+    right: 53%;
+    top:92%;
+  }
+  .div22{
+    position: absolute;
+    right: 2.5%;
+    top:92%;
+  }
+  .p1{
+    position: relative;
+    color:#fff;
+    line-height:40px;
+    padding:0 20px;
+    font-size:13px;
+  }
+  .p2{
+    position: absolute;
+    color:#fff;
+    bottom:18px;
+    font-size:13px;
+  }
+  .p3{
+    position: absolute;
+    top:94%;
+    right: 36.5%;
+  }
+  .fixModal{
+    overflow:hidden;
+    position:absolute;
+    top:45px;
+    right:0;
+    left:0px;
+    bottom:0;
+    margin:0;
+    border-radius:0;
+  }
+}
+.formList{
+  width:425px;
+  position: absolute;
+  overflow: auto;
+  background:#fff;
+  border-radius:4px;
+  border:1px solid #c8c8cb;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  left:10px;
+  bottom:10px;
+  top:0;
+}
+.rowBox{
+  width:300px;
+  height:90%;
+  margin-top:10px;
+}
+
+.GoBack{
+  position: absolute;
+  right:10px;
+  top:10px;
+}
+
+.pImg{
+  width:48%;
+  height:100%;
+  margin: 0 1% 0;
+  float:left;
+  position: relative;
+}
+.pImg .ImgClass{
+  top:0;
+  bottom:40px;
+  position: absolute;
+  background:#fff;
+}
+
+.pImg .ImgClass img{
+  width:100%;
+  height:100%;
+}
+.divBoxs{
+  position:absolute;
+  left:15px;
+  right:15px;
+  top:25px;
+  bottom:0;
+  overflow: hidden;
+}
+.btns{
+  width:50%;
+  height:30px;
+  position: absolute;
+  bottom:1px;
+}

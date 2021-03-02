@@ -1,0 +1,69 @@
+
+.wrapprSection {
+  >>>.tree{
+    width:390px;
+    .treeCon{
+      top: 0;
+      bottom: 50px;
+    } 
+  } 
+  >>>.contentbox{
+    left:410px
+  }
+  
+} 
+body {
+  >>>.footBtn{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background: #fff;
+    padding: 10px;
+    
+  }
+} 
+  .pdfbox{
+      background-color: rgb(172,172,172);
+      position:absolute;
+      width: 100%; 
+      left: 0;    
+      top:43px;
+      bottom: 45px;
+    }
+  .div1{
+      height:100%;
+      position: relative;
+      top:0;
+      cursor:pointer;
+      margin-top:10px;
+      overflow-y: auto;
+    }
+
+
+    .p2{
+      position: absolute;
+      color:#fff;
+      bottom:18px;
+      font-size:13px;
+    }
+
+  .pImg{
+    width:48%;
+    height:100%;
+    margin: 0 1% 0;
+    float:left;
+    position: relative;
+  }
+  .pImg .ImgClass{
+    top:0;
+    bottom:40px;
+    position: absolute;
+    background:#fff;
+    width:100%;
+  }
+
+  .pImg .ImgClass img{
+    width:100%;
+    height:100%;
+  }

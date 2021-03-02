@@ -1,0 +1,99 @@
+.wrapprSection {
+    overflow:hidden;
+    .contentbox-full{ 
+      left: 10px;
+    //   top:50px;
+      overflow-y: auto;
+    .rowBar{
+      width:100%;
+      float:left; 
+      display:flex;
+      .barbtn{
+        width: 110px; float: left; margin-right: 10px;
+      }
+      .txt{
+        height:50px;line-height: 52px;background-color: lightgray;float:left;padding:0 10px;
+      }
+      .pubform{
+        float:left;width:80%;flex:1;
+      }
+     }
+     .pub-main{
+      position: absolute; 
+      top: 60px; 
+      background-color: white;
+      width: 100%;
+      padding:10px; 
+      bottom: 0px;
+      .pub-title{
+        height: 50px; line-height: 40px;
+      }
+      .pub-con{
+        position: absolute;
+        top: 102px;
+        bottom: 0px;
+        left: 10px;
+        right: 10px;
+        // background-color: pink;
+      }
+      .userPortraitView{
+        // width: 15%;
+        float: left;
+      }
+      .userInformationView{
+        // width: 89%;
+        // float: right;
+        .InformationItem {
+          padding: 0 0 10px 0;
+          .el-form-item{
+            margin-top: 7px;
+            margin-bottom: 7px;
+          }
+        }
+        .InformationThree{
+          .el-form-item{
+            width: 49%;
+          }
+        }
+
+      }
+      .leftMain{
+          width: 15%;
+          border: 1px solid #bbb;
+          float: left;
+          .defaultBtn:hover {
+            background-color: #2b87c6;
+          }
+      }
+      .contentView{
+        width: 84%;
+        background: rgb(249, 249, 249);
+        float: right  
+        }
+     }
+     .userInformationView{
+      // width: 89%;
+      // float: right;
+      .InformationItem {
+        padding: 0 0 10px 0;
+        .el-form-item{
+          margin-top: 7px;
+          margin-bottom: 7px;
+        }
+      }
+      .InformationThree{
+        .el-form-item{
+          width: 49%;
+        }
+      }
+      .avatar {
+        width: 178px;
+        height: 178px;
+        display: block;
+      }
+    }
+   }
+   
+  }
+  
+   

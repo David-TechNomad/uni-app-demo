@@ -1,0 +1,377 @@
+.enterstores{
+    margin-left:2px;
+    height:100%;
+    position:relative;
+  }
+  .enterstores .conbinefilet{
+
+    height:50px;
+    margin-right:5px;
+    line-height:50px;
+    >span{
+      margin-left:8px;
+      color: #428bca;
+      //border-left:3px solid #428bca;
+      padding:0 10px;
+      line-height: 30px;
+      color: #428bca;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  .enterstores .conbinefilet .checkWay{
+    float: right;
+    margin-top:10px;
+  }
+  .enterstores .combinetables{
+
+    position: absolute;
+    top:50px;
+    left:5px;
+    right:5px;
+    bottom:5px;
+    .combinetableLl{
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      width: 55%;
+      border:1px solid #cccccc;
+      background: #ffffff;
+      .sorts{
+        width: 55%;
+        float: left;
+        height:40px;
+        border-bottom:1px solid #cccccc;
+        padding:0 5px;
+        line-height:40px;
+        // margin: 10px 0;
+        .el-button{
+          float: right;
+          margin-top:5px;
+        }
+      }
+      .enterstoreTables{
+        position: absolute;
+        top:40px;
+        bottom:0;
+        left:5px;
+        right:5px;
+      }
+    }
+    .combinetableR{
+      width:44%;
+      height:100%;
+      float: right;
+      border:1px solid #cccccc;
+      background: #ffffff;
+      position:relative;
+      >p{
+        height:40px;
+        line-height: 40px;
+        padding-left:5px;
+        border-bottom:1px solid #cccccc;
+      }
+      .enterTree{
+        position:absolute;
+        top:40px;
+        bottom:120px;
+        width:100%;
+        padding:0 10px;
+        overflow-y:auto;
+      }
+      .combinetableRB{
+        height:120px;
+        width:100%;
+        padding:0 10px;
+        position:absolute;
+        bottom:0;
+        border-top:1px solid #cccccc;
+        text-align:center;
+        .el-input{
+          margin-top:5px;
+        }
+        >p{
+          font-size:12px;
+          color: #666666;
+          margin-top:5px;
+          height:40px;
+          line-height:20px;
+          text-align:left;
+        }
+        .el-button{
+          margin-top:5px;
+        }
+      }
+    }
+  }
+  .left{
+        border: 1px solid lightgrey;
+        background: #ffffff;
+        position: absolute;
+        width: 22%;
+        //top: 14%;
+        top: 82px;
+        bottom: 1px;
+        span{
+          display: block;
+          margin: 10px;
+        }
+    .searchCompany{
+        height: 32px;
+        width: 100% !important;
+        line-height: 28px;
+        border: 1px solid #ebeef5;
+        font-size: 12px;
+        color: #333333;
+        // border-radius: 4px;
+        background:#FAFAFA;
+
+
+    .fileManagementElDropdown{
+        height:26px;
+        line-height:26px;
+        width: 100%;
+      .el-dropdown-link{
+        width:100%;
+        display: inline-block;
+        position:relative;
+        overflow-x: hidden;
+        padding:0 10px 0 0;
+      }
+
+    }
+    .toback{
+      height:100%;
+      float: right;
+    }
+  }
+    .treeTitle{
+      border: 1px solid #cccccc;
+      width: 75%;
+      height: 100%;
+      /* position: absolute; */
+       position: absolute;
+        float: left;
+    }
+    .fileList{
+      width: 100%;
+      position: absolute;
+      top:44px;
+      bottom:32px;
+      background: #ffffff;
+      padding:0 15px 5px 10px;
+      .el-col {
+        //height: 300px;
+        //width: 100%;
+        height:100%;
+        overflow: hidden;
+
+      }
+    }
+    .fabutton{
+
+      width: 24%;
+      height: 100%;
+      /* position: absolute; */
+      float: right;
+      .fontClass{
+        .el-button{
+          display: inline-block;
+          height:40px;
+          width:13px;
+          margin-top: 20px;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+        //.el-icon-caret-top:before{
+        //  font-size: xx-large;
+        //  margin: -15px;
+        // }
+        // .el-icon-caret-bottom:before{
+        //  font-size: xx-large;
+        //  margin: -15px;
+        // }
+        // .el-icon-close:before{
+        //  font-size: x-large;
+        //  margin: -15px;
+        // }
+        // .el-icon-refresh:before{
+        //  font-size: x-large;
+        //  margin: -15px;
+        // }
+
+      }
+
+    }
+  }
+  .right{
+    border: 1px solid lightgrey;
+    position: absolute;
+    background: #ffffff;
+    right:0;
+    //top: 14%;
+    top:82px;
+    width: 21%;
+    bottom: 1px;
+
+    span{
+      display: block;
+    margin: 10px;
+    }
+    .searchCompany{
+      height: 32px;
+      width: 100% !important;
+      line-height: 28px;
+      border: 1px solid #ebeef5;
+      font-size: 12px;
+      color: #333333;
+      // border-radius: 4px;
+      background:#FAFAFA;
+
+    .fileManagementElDropdown{
+      height:26px;
+      line-height:26px;
+      width: 100%;
+      .el-icon--right{
+        float: right;
+        margin: 3px;
+      }
+      .el-dropdown-link{
+        width:100%;
+        display: inline-block;
+        position:relative;
+        overflow-x: hidden;
+        padding:0 10px 0 0;
+      }
+    }
+  }
+    .treeTitle{
+
+      border: 1px solid #cccccc;
+      width: 75%;
+      height: 100%;
+      /* position: absolute; */
+      position: absolute;
+      float: left;
+
+    }
+    .fabutton{
+
+      width: 24%;
+      height: 100%;
+      /* position: absolute; */
+      float: right;
+      .fontClass{
+        padding-top:8px;
+        .el-button{
+          display: inline-block;
+          height:40px;
+          width:13px;
+          margin-top: 20px;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+        //.el-icon-caret-top:before{
+        //  font-size: xx-large;
+        //  margin: -15px;
+        // }
+        // .el-icon-caret-bottom:before{
+        //  font-size: xx-large;
+        //  margin: -15px;
+        // }
+        // .el-icon-close:before{
+        //  font-size: x-large;
+        //  margin: -15px;
+        // }
+        // .el-icon-refresh:before{
+        //  font-size: x-large;
+        //  margin: -15px;
+        // }
+
+      }
+
+    }
+
+  }
+  .left  .thisTitle{
+    text-align: center;
+    height: 86%;
+    overflow-y: scroll;
+
+    p{
+      text-align: left;
+      line-height: 18px;
+      color: #333333;
+      cursor: pointer;
+    }
+  }
+  .right .thisTitle{
+    text-align: center;
+    height: 86%;
+    overflow-y: scroll;
+    p{
+      text-align: left;
+      line-height: 18px;
+      color: #333333;
+      cursor: pointer;
+    }
+  }
+  .up_fondTitle{
+    margin-left: 5%;
+  }
+  .thisBig{
+    position: absolute;
+    right: 2%;
+    top: 30%;
+  }
+  .spanDiv{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+  }
+.bigJing{
+  position: absolute;
+  left: 92%;
+  bottom: 30%;
+}
+  .myInput{
+    width: 140px;
+  }
+  .checkNamess{
+    width: 210px !important;
+  }
+.v-modal{
+  display: none;
+}
+.active{
+  background: #cccccc;
+
+}
+.tableheated{
+  width: 55%;
+    float: left;
+     background: #fff;
+}
+  .raw{
+    width:43%;
+    float:right;
+    background:#fff;
+    .duiying{
+      width: 60%;
+      height: 32px;
+      float: left;
+      span{
+        display: block;
+        margin: 10px;
+      }
+
+    }
+  }
+  .el-icon-back:before{
+    font-size: large;
+    margin: -15px;
+
+   }
+
+  

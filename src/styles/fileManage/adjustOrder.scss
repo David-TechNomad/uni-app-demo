@@ -1,0 +1,81 @@
+.adjustorder{
+  height:100%;
+  position: relative;
+  .adjustHeader{
+    height:50px;
+    margin-right:5px;
+      .checkWay{
+        float:right;
+        margin-top:10px;
+      }
+    >span{
+      color: #428bca;
+      border-left:3px solid #428bca;
+      padding:0 10px;
+      line-height: 50px;
+      color: #428bca;
+      font-weight: 500;
+      font-size: 16px;
+      margin-left:5px;
+    }
+  }
+  .adjustTable{
+    width:100%;
+    padding:0 5px;
+    position:absolute;
+    top:50px;
+    bottom:40px;
+      .tableContainer{
+        height:100%;
+        padding:0 5px;
+        background:#ffffff;
+        border:1px solid #cccccc;
+        position: relative;
+          .productFileNum{
+            height:50px;
+            padding:10px 0;
+            .checkWay{
+              padding:0 10px!important;
+              margin-left:5px !important;
+              &:nth-of-type(1){
+                margin-left:0!important;
+              }
+            }
+              .el-button i{
+                display: inline-block;
+                height:13px;
+                width:13px;
+                background: url("../../../../imgs/fileManagement/arrow2.png");
+                -webkit-background-size: contain;
+                background-size: contain;
+              }
+              .el-button:nth-of-type(2) i{
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+          }
+        .tableposition{
+          position: absolute;
+          top:50px;
+          left:5px;
+          right:5px;
+          bottom:0px;
+        }
+      }
+  }
+  .adjustFooter{
+    width:100%;
+    height:40px;
+    padding:5px 10px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    .checkWay{
+      float: right;
+      margin-left:5px;
+    }
+  }
+}

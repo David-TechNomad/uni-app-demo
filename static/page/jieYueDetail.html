@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>万达集团档案管理系统</title>
+  <meta name="renderer" content="webkit">
+  <link rel="icon" type="image/png" href="image/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="layui/css/layui.css"  media="all">
+  <link href="yangShi1.css" rel=Stylesheet type=text/css>
+  <script src="js/jquery.min.js" type=text/javascript></script>
+  <script src="js/jquery.base64.js" type=text/javascript></script>
+    <script src="js/yuMing.js" type=text/javascript></script>
+</head>
+
+<script>
+    var url = window.location.href;
+    url = decodeURI(url);
+    var weiZhi = url.indexOf("?");
+
+    var url1 = url.substr(weiZhi,url.length);
+    function getBrowserInfo(){
+        var Sys = {browser:'',ver:''};
+        var ua = navigator.userAgent.toLowerCase();
+
+        var re =/(windows nt|msie|firefox|chrome|opera|version).*?([\d.]+)/;
+        var m = ua.match(re);
+        Sys.browser = m[1].replace(/version/, "'safari");
+        Sys.ver = m[2];
+        return Sys;
+    }
+
+    var sys = getBrowserInfo();
+    //sys.browser得到浏览器的类型，sys.ver得到浏览器的版本
+    //alert(sys.browser + "的版本是：" + sys.ver);
+    //var yuMing = getYuMing();
+    if(!(sys.browser === 'msie' && parseInt(sys.ver) <=10 )){
+        //alert('不是ie8,9跳转到vue')
+        if(url.indexOf('dangan.wanda-dev.cn') > 0){
+            window.location.href = 'http://dangan.wanda-dev.cn:8080/test/?#/selfTip/examination/borrowExaminationDetail/borrowExaminationDetail'+url1;
+        }else if(url.indexOf('dangan.wanda.cn') > 0){
+            window.location.href = 'http://dangan.wanda.cn/?#/selfTip/examination/borrowExaminationDetail/borrowExaminationDetail'+url1;
+        }
+    }
+</script>
+<body>          
+<div class="main" style="padding:20px;">
+    <div class="mainTitle" style="text-align:center;">
+        <span id="jieYueTitle">档案借阅详情</span><span id="xuJieTitle">档案续借详情</span>
+<!--		<div style="float:right; padding-right:20px;">
+			<input type="button" class="el-button checkWay rt el-button&#45;&#45;default" value="打印" onclick="return print();"/>
+		</div>-->
+    </div>
+    <div class="mainDoc" id="jieYue">
+        <div class="mainCon basicList">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                借阅单号：<span name="appNo"></span>
+                <div class="titleSect"></div>
+            </div>
+            <ul class="rowsForm">
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">标题</span></div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content bg-purple-light"><span class="span2" name="title"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请人</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" name="userName"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请人部门</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" name="userDept"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请时间</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2"  name="appDate"></span></div>
+                    </div>
+                </div>
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1" >计划借阅日期</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span class="span2" id="appStartDate1"></span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">计划归还日期</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span class="span2" id="appEndDate1"></span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">计划借阅天数</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2" id="days1"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content1 bg-purple"
+                             style="border-left: 1px solid rgb(204, 204, 204); border-right: 0px;"><span class="span1">借阅事由</span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content1 bg-purple-light" style="padding-left: 10px;line-height: 40px;border-left: 0px;" name="lookupDescription"></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainDoc" id="xuJie">
+        <div class="mainCon basicList">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                借阅单号：<span name="appNo"></span>
+                <div class="titleSect"></div>
+            </div>
+            <ul class="rowsForm">
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">标题</span></div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content bg-purple-light"><span class="span2" name="title"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请人</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" name="userName"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请人部门</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span
+                                class="span2" name="userDept"></span></div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">申请时间</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2"  name="appDate"></span></div>
+                    </div>
+                </div>
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1" >原计划借阅日期</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span class="span2" id="appStartDate2"></span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">原计划归还日期</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light" style="border-right: 0px;"><span class="span2" id="appEndDate2"></span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">原计划借阅天数</span></div>
+                    </div>
+                    <div class="el-col el-col-5">
+                        <div class="grid-content bg-purple-light"><span class="span2" id="days2"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">续借天数</span></div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content bg-purple-light"><span class="span2" id="xuJieDays"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content bg-purple"><span class="span1">原流程</span></div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content bg-purple-light"><span class="span2" id="oldTitle"></span></div>
+                    </div>
+                </div>
+
+                <div class="el-row">
+                    <div class="el-col el-col-3">
+                        <div class="grid-content1 bg-purple"
+                             style="border-left: 1px solid rgb(204, 204, 204); border-right: 0px;"><span class="span1">借阅事由</span>
+                        </div>
+                    </div>
+                    <div class="el-col el-col-21">
+                        <div class="grid-content1 bg-purple-light" style="padding-left: 10px;line-height: 40px;border-left: 0px;" name="lookupDescription"></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainDoc" style="margin-top:20px;">
+		<div class="mainCon basicList" style="margin-bottom:0px;border-bottom: 0;">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                待借阅档案
+                <div class="titleSect"></div>
+            </div>
+		</div>
+		<div style="padding:10px;border:1px solid #c8c8cb">
+			<table class="layui-hide" id="table1"></table>  
+		</div>
+	</div>
+	
+	<div class="mainDoc" style="margin-top:20px;">
+		<div class="mainCon basicList" style="margin-bottom:0px;border-bottom: 0;">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                审批流程
+                <div class="titleSect"></div>
+            </div>
+		</div>
+		<div style="padding:10px;border:1px solid #c8c8cb;line-height:20px;">
+			<div id="span"></div>
+		</div>
+	</div>
+
+
+	<div class="mainDoc" style="margin-top:0px;">
+		<div class="mainCon basicList" style="margin-bottom:0px;border-bottom: 0;">
+            <div class="loanTipTitle" style="margin-left:-7px;">
+                审批记录
+                <div class="titleSect"></div>
+            </div>
+		</div>
+		<div style="padding:10px;border:1px solid #c8c8cb">
+			<table class="layui-hide" id="table2"></table>  
+		</div>
+	</div>
+</div> 
+        
+<script src="layui/layui.js" charset="utf-8"></script>
+<script>
+    $("#jieYue").hide();
+    $("#jieYueTitle").hide();
+    $("#xuJie").hide();
+    $("#xuJieTitle").hide();
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "H+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+
+    function myTime(date){
+        var arr=date.split("T");
+        var d=arr[0];
+        var darr = d.split('-');
+
+        var t=arr[1];
+        var tarr = t.split('.000');
+        var marr = tarr[0].split(':');
+
+        var dd = parseInt(darr[0])+"/"+parseInt(darr[1])+"/"+parseInt(darr[2])+" "+parseInt(marr[0])+":"+parseInt(marr[1])+":"+parseInt(marr[2]);
+        return dd;
+    }
+
+    // 数字补0操作
+    function  addZero(num) {
+        return num < 10 ? '0' + num : num;
+    }
+
+    function formatDateTime (date) {
+        var time = new Date(Date.parse(date));
+        time.setTime(time.setHours(time.getHours() + 8));
+        var Y = time.getFullYear() + '-';
+        var M = addZero(time.getMonth() + 1) + '-';
+        var D = addZero(time.getDate()) + ' ';
+        var h = addZero(time.getHours()) + ':';
+        var m = addZero(time.getMinutes()) + ':';
+        var s = addZero(time.getSeconds());
+        return Y + M + D;
+    }
+
+    function getLocalTime(strDate, timezone) {
+
+        if(strDate.indexOf('.') > 0){
+            strDate = strDate.split('.')[0]
+        }
+
+        strDate = strDate.replace(/T/g, ' ').replace(/-/g,"/");
+
+        var d = new Date(strDate);
+        if(!timezone && timezone !==0){
+            timezone = 0-d.getTimezoneOffset()/60;
+        }
+        //得到1970年一月一日到现在的秒数
+
+        var len = d.getTime();
+
+        //本地时间与GMT时间的时间偏移差
+
+        var offset = d.getTimezoneOffset() * 60000;
+
+        //得到现在的格林尼治时间
+
+        var utcTime = len + offset;
+
+        return new Date(len + 3600000 * timezone);
+
+    }
+
+    function formatDateTime1 (date) {
+        //console.log(getLocalTime(date,8));
+        // var time = new Date(Date.parse(date));
+        var time = getLocalTime(date,8);
+        //time.setTime(time.setHours(time.getHours() + 8));
+        var Y = time.getFullYear() + '-';
+        var M = addZero(time.getMonth() + 1) + '-';
+        var D = addZero(time.getDate()) + ' ';
+        var h = addZero(time.getHours()) + ':';
+        var m = addZero(time.getMinutes()) + ':';
+        var s = addZero(time.getSeconds());
+        return Y + M + D + h + m +s;
+    }
+
+    var parameOne;
+    var parameTow;
+    if(url.indexOf("applicationNo") > 0){
+        if(url.split('?')[1]){
+            var bb = (url.split('?')[1]).split("&")[0];
+            var pb = bb.substr(bb.indexOf("=")+1);
+            var b =$.base64.decode(
+                pb
+            );
+            var cc = (url.split('?')[1]).split("&")[1];
+            var pc = cc.substr(cc.indexOf("=")+1);
+            var c = $.base64.decode(
+                pc
+            );
+            parameOne = b;//参数1
+            parameTow = parseInt(c);//参数2
+        }
+    }
+    var obj = {
+        'applicationNo': parameOne,
+    };
+    var tableHeader = [];
+    var tableData1 = [];
+    var tableData2 = [];
+    var detailData = {};
+    $.ajax({
+        dataType: 'json',
+        type:'post',
+        async:false,
+        xhrFields: {
+            withCredentials: true
+        },
+        contentType: 'application/json;charset=UTF-8',
+        url:'/utilize/getUtilizeLookup',
+        data:JSON.stringify(obj),
+        success:function (res) {
+            if(res.data.parentAppNo != null){
+                $("#xuJie").show();
+                $("#xuJieTitle").show();
+            }else{
+                $("#jieYue").show();
+                $("#jieYueTitle").show();
+            }
+            $("[name='appNo']").text(res.data.applicationNo);
+            $("[name='title']").text(res.data.title);
+            $("[name='userName']").text(res.data.userName);
+            $("[name='userDept']").text(res.data.userDept);
+            $("[name='appDate']").text(formatDateTime(myTime(res.data.appDate)));
+            $("#appStartDate1").text(formatDateTime(myTime(res.data.appStartDate)));
+            $("#appEndDate1").text(formatDateTime(myTime(res.data.appEndDate)));
+            $("#days1").text(res.data.days);
+            if(res.data.parentAppNo != null){
+                var parame = {applicationNo:res.data.parentAppNo};
+                $.ajax({
+                    dataType: 'json',
+                    type:'post',
+                    async:false,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    contentType: 'application/json;charset=UTF-8',
+                    url:'/utilize/getUtilizeLookup',
+                    data:JSON.stringify(parame),
+                    success:function (res1) {
+                        detailData = res1.data;
+                        $("#appStartDate2").text(formatDateTime(myTime(res.data.appStartDate)));
+                        $("#appEndDate2").text(formatDateTime(myTime(res.data.appEndDate)));
+                        $("#days2").text(res1.data.days);
+                        $("#oldTitle").text(res1.data.title);
+                        $("#xuJieDays").text(res.data.days - res1.data.days +"天");
+                    }
+                });
+            };
+            $.ajax({
+                dataType: 'json',
+                type:'post',
+                async:false,
+                xhrFields: {
+                    withCredentials: true
+                },
+                contentType: 'application/json;charset=UTF-8',
+                url:'/utilize/getUtilizeProcess',
+                data:JSON.stringify({applicationNo:res.data.applicationNo}),
+                success:function (res2) {
+                    var html = '';
+                    var text = '';
+                    for(var i = 0;i<res2.data.length;i++){
+                        text = res2.data[i].auditUserRole+"【"+res2.data[i].auditUserName+
+                            "<span><i class='layui-icon layui-icon-ok' style='color: green;'></i></span><span><i class='layui-icon layui-icon-close' style='color: red;'></i></span>】<span id="+i+">→</span>";
+                        if(res2.data[i].auditResult == 1){
+                            text = res2.data[i].auditUserRole+"【"+res2.data[i].auditUserName+
+                                "<span><i class='layui-icon layui-icon-ok' style='color: green;'></i></span>】<span id="+i+">→</span>";
+                        }else if(res2.data[i].auditResult == 2){
+                            text = res2.data[i].auditUserRole+"【"+res2.data[i].auditUserName+
+                                "<span><i class='layui-icon layui-icon-close' style='color: red;'></i></span>】<span id="+i+">→</span>";
+                        }else {
+                            text = res2.data[i].auditUserRole+"【"+res2.data[i].auditUserName+
+                                "】<span id="+i+">→</span>";
+                        }
+                        html += text;
+                    };
+                    $("#span").append(html);
+                    var shuZi = res2.data.length-1;
+                    $("#"+shuZi).hide();
+                }
+            });
+            $("[name='lookupDescription']").text(res.data.lookupDescription);
+            getHeader();
+            borrowCheckTable();
+        },
+        error:function(xhr,state,errorThrown){
+            document.write(errorThrown)
+            document.write(xhr);
+        }
+    });
+
+    function getHeader(){
+        var o = {};
+        $.ajax({
+            dataType: 'json',
+            type:'post',
+            async:false,
+            xhrFields: {
+                withCredentials: true
+            },
+            contentType: 'application/json;charset=UTF-8',
+            url:'/senior/getListColums',
+            data:JSON.stringify(o),
+            success:function (res) {
+                for(var i = 0;i < res.data.length;i++){
+                    var obj = {
+                        field :res.data[i].fieldName,
+                        title:res.data[i].caption
+                    };
+                    tableHeader.push(obj);
+                };
+                borrowFileTable();
+            },
+            error:function(xhr,state,errorThrown){
+                document.write(errorThrown)
+                document.write(xhr);
+            }
+        });
+    }
+
+    function borrowFileTable(){
+        $.ajax({
+            dataType: 'json',
+            type:'post',
+            async:false,
+            xhrFields: {
+                withCredentials: true
+            },
+            contentType: 'application/json;charset=UTF-8',
+            url:'/utilize/mineUtilizeArcs',
+            data:JSON.stringify(obj),
+            success:function (res) {
+                tableData1 = res.data;
+                if(tableData1.length != 0){
+                    for(var a = 0;a<tableData1.length;a++){
+                        if(tableData1[a].HOUSETYPE == 1 || tableData1[a].HOUSETYPE == '1'){
+                            tableData1[a].HOUSETYPE = '在库';
+                        }else if(res.data[a].HOUSETYPE == 1 || tableData1[a].HOUSETYPE == '2'){
+                            tableData1[a].HOUSETYPE = '借出';
+                        }else{
+                            tableData1[a].HOUSETYPE = '无实体';
+                        }
+                    }
+                }
+            },
+            error:function(xhr,state,errorThrown){
+                document.write(errorThrown)
+                document.write(xhr);
+            }
+        });
+    };
+
+    function borrowCheckTable(){
+        $.ajax({
+            dataType: 'json',
+            type:'post',
+            async:false,
+            xhrFields: {
+                withCredentials: true
+            },
+            contentType: 'application/json;charset=UTF-8',
+            url:'/utilize/mineUtilizeProcess',
+            data:JSON.stringify(obj),
+            success:function (res) {
+                for(var a = 0;a<res.data.length;a++){
+                    var jiLuObj = {
+                        xuHao:res.data.length-a,
+                        auditUserRole:res.data[a].auditUserRole,
+                        auditRemark:res.data[a].auditRemark,
+                        auditUserName:res.data[a].auditUserName,
+                        auditDate:formatDateTime1(res.data[a].auditDate),
+                        typeName:res.data[a].typeName,
+                        receiveUserName:res.data[a].receiveUserName,
+                    };
+                    tableData2.push(jiLuObj);
+                }
+            },
+            error:function(xhr,state,errorThrown){
+                document.write(errorThrown)
+                document.write(xhr);
+            }
+        });
+    }
+
+layui.use('table', function(){
+  var table = layui.table;
+  table.render({
+    elem: '#table1'
+    ,data:tableData1
+    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+    ,cols: [tableHeader]
+      ,limit: tableData1.length//显示的数量
+  });
+  var cols = [
+      {field:'xuHao', width:80, title: '序号'}
+      ,{field:'auditUserRole',  title: '审批节点'}
+      ,{field:'auditRemark',  title: '签字意见'}
+      ,{field:'auditUserName', title: '审批人'}
+      ,{field:'auditDate', title: '审批时间'} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+      ,{field:'typeName', title: '操作'}
+      ,{field:'receiveUserName', title: '接收人'}
+  ];
+  table.render({
+    elem: '#table2'
+    //url:'http://10.1.235.248:9090/partTimeArchivist/checkUser'
+	,data:tableData2
+    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+    ,cols: [cols]
+      ,done: function (res, curr, count) {
+          $('th').css({'background-color': '#efeff0', 'color': '#fff'});
+          $('th').css({'color': 'black', 'color': 'black'});
+      }
+      ,limit: tableData2.length//显示的数量
+  });
+});
+
+
+
+function print(){
+	alert(打印);
+	return false;
+}
+
+
+function applySubmit(a){
+    if($("#yiJian").val() == ''){
+        layer.msg('请选择审批意见', { icon: 7, time: 2000, shade: [0.6, '#000', true] });
+        return;
+    }
+    var shenPiParame = {
+        id:parameTow,
+        auditResult:a,
+        auditRemark:$("#desc").val(),
+        ccUser:null,
+    };
+    $.ajax({
+        dataType: 'json',
+        type:'post',
+        xhrFields: {
+            withCredentials: true
+        },
+        contentType: 'application/json;charset=UTF-8',
+        url:'/utilize/audit',
+        data:JSON.stringify(shenPiParame),
+        success:function (res) {
+            if(res.succeeded){
+                window.opener = null;
+                window.close();
+            }else{
+                layer.msg(res.errorMessage, { icon: 7, time: 2000, shade: [0.6, '#000', true] });
+            }
+
+        },
+        error:function(xhr,state,errorThrown){
+            document.write(errorThrown);
+            document.write(xhr);
+        }
+    })
+}
+
+function changeYiJian(){
+    if($("#yiJian").val() == 1){
+        $("#desc").val("同意");
+    }else if($("#yiJian").val() == 2){
+        $("#desc").val("不同意");
+    }else{
+        $("#desc").val("收到");
+    }
+
+}
+</script>
+
+</body>
+</html>

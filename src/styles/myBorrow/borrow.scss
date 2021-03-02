@@ -1,0 +1,166 @@
+.wrapprSection {
+  overflow:hidden;
+  .contentbox-full{ 
+    left: 10px;
+    top:50px;
+    overflow-y: auto;
+    .leftDiv{
+      float:left;
+      width: 70%;
+      height: 100%;
+      .noFileDiv{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .rightDiv{
+      float:left;
+      width: 30%;
+      height: 100%;
+      .rightPro{
+        position: absolute;
+        bottom:241px;
+        width:30%;
+        right:0px;
+        top:25px;
+        overflow: auto;
+        padding-left:10px;
+      }
+      .bottomDiv{
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        width: 30%;
+        padding-top: 15px;
+        padding-left: 10px;
+        height:241px;
+        border-top: 1px solid gray;
+      }
+    }
+  } 
+  .divTitle{
+    margin: 5px;
+    line-height: 25px;
+    font-weight: 800;
+    padding-left:10px;
+  }
+  .bt50{
+    bottom: 50px;
+  }
+  .borrowRadio{
+    .el-radio+.el-radio {
+      margin-left: 10px!important;
+    }
+  }
+  .borrowForm{
+    .el-form-item--mini.el-form-item, .el-form-item--small.el-form-item {
+      margin-bottom: 0px;
+    }
+  }
+  .processleftDiv{
+    position: absolute;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    width: 260px;
+    background-color: white;
+  }
+  .processRightDiv{
+    position: absolute;
+    left:270px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    background-color: white;
+    overflow: hidden;
+    .addBtnDiv{
+      height:50px;
+      width:100%;
+      padding: 10px;
+    }
+  }
+} 
+
+
+.TabRBtn{
+  position: absolute;
+  right: 10px;
+  line-height: 40px;
+  left: 138px;
+  z-index:1111;
+  .el-button{
+    margin-right: 10px;
+  }
+}
+
+
+.TabRBtn i{
+  color: #78c500;
+  margin-right: 5px;
+}
+.list{
+  width: 300px;
+  padding:10px;
+}
+.ulList{
+  margin: 10px;
+  line-height: 33px; 
+  padding: 0;
+}
+.listtitle{
+  margin: 10px;
+}
+body >>>.el-form-item{
+  margin-bottom: 10px;
+}
+
+.basicMsg{
+  padding: 10px;
+  overflow-x: auto;
+  .el-row {
+    line-height: 30px;
+    span{
+      margin-left: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+}
+.el-form-item--small.el-form-item {
+  margin-bottom: 10px;
+}
+.disFlex{
+  display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+  display: -moz-box; /* Firefox 17- */  
+  display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+  display: -moz-flex; /* Firefox 18+ */  
+  display: -ms-flexbox; /* IE 10 */  
+  display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ 
+  .uMsg{
+    float:left;
+    width:300px;
+    height:100%
+  }
+  .flex1{
+    float:left;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;    
+    height:100%;
+    .w100{
+      width:100%;
+    }
+    .borderleft{
+      border-left: 1px solid #ccc;
+    }
+    .el-date-editor.el-input, .el-date-editor.el-input__inner {
+      width: 140px;
+    }
+    .el-select {
+      width: 140px;
+    }
+  }
+}
+
+

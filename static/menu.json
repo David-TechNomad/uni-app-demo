@@ -1,0 +1,155 @@
+
+{
+  "status": "0",
+  "user": {
+    "username": "admin",
+    "password": "123456",
+    "avatar": "http://o73el5cs1.bkt.clouddn.com/icon-avatar.jpg"
+  },
+  "menus": [
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "调阅管理",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "name": "调阅管理",
+          "leaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "归档管理",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "归档管理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "档案管理",
+      "iconCls": "fa fa-bar-chart",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "档案管理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "统计分析",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "统计分析",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "库房管理",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "库房管理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "档案鉴定",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "档案鉴定",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "系统管理",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "系统管理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "下载管理",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/Table",
+          "component": "Table",
+          "leaf": true,
+          "name": "下载管理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "用户中心",
+      "iconCls": "fa fa-id-card",
+      "leaf": false,
+      "children": [
+        {
+          "path": "/User",
+          "component": "User",
+          "leaf": true,
+          "name": "用户中心",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

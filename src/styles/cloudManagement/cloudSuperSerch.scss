@@ -1,0 +1,106 @@
+/**
+ * @css
+ * @高级检索结果
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    position:relative;
+   .mainTitle{
+     line-height:50px;
+     height:50px;
+     color:rgb(66,139,202);
+     font-weight:500;
+     font-size:16px;
+     span{
+       padding:0 10px;
+       border-left:3px solid rgb(66,139,202);
+     }
+   }
+    .tree{
+      position:absolute;
+      top:50px;
+      bottom:10px;
+      background:#fff;
+      padding:10px;
+      overflow-y:auto;
+      border:1px solid #f9fcf9;
+      border-bottom: none;
+      border-right:none;
+    }
+    .fontClass{
+      width:270px;
+      height:30px;
+      position:absolute;
+      top:38px;left:10px;
+      line-height:30px;
+      text-align:right;z-index:99;
+      border-bottom: 1px solid #ccc;
+      background: #fff;
+      i{
+        color:#428bca;
+        font-size:18px;
+        padding:0 3px;
+      }
+    }
+    .treeOne{
+      width:270px;
+    }
+    .search{
+      position:absolute;
+      top:0;
+      left:280px;
+      right:0;
+      bottom:0;
+    }
+  }
+  .cloudAdd{
+    span{
+      display:inline-block;
+      float:left;
+    }
+    li{
+      width:auto;
+      float:right;
+      position: relative;
+      right: 0;
+    }
+   }
+
+   .fixModal .el-dialog__header{
+     text-align: left !important;
+   }
+   .dioBox{
+     width:93%;
+     margin:3% 0 0 4%;
+   }
+
+   .titleBlue{
+    width:99%;
+    height:30px;
+    margin:10px 0;
+    position: absolute;
+    color:#7ca9d6;
+    font-size: 16px;
+    font-weight:800;
+    padding: 3px 15px;
+    b{
+      width:5px;
+      height:18px;
+      background: #7ca9d6;
+      position: absolute;
+      left:0;
+      top:3px;
+    }
+ 
+  }
+
+   .uploadList{
+     margin: 10px 0;
+     padding: 0 10px;
+     min-height:100px;
+     max-height:200px;
+     overflow-y:auto;
+     border:1px solid #ccc
+   }

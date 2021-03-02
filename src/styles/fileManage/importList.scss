@@ -1,0 +1,59 @@
+/**
+ * @css
+ * @我的借阅
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    .mainTitle{
+      line-height:50px;
+      height:50px;
+      color:rgb(66,139,202);
+      font-weight:500;
+      font-size:16px;
+      span{
+        padding:0 10px;
+        border-left:3px solid rgb(66,139,202);
+      }
+    }
+    .mainDoc{
+      position:absolute;
+      top:50px;
+      bottom:10px;
+      left:0;
+      right:0;
+      padding:0 10px;
+      .doubleForm{
+        padding:10px;
+        background:#fff;
+      }
+      .mainCon{
+        height:100%;
+        .more{
+          font-size:12px;
+          position:absolute;
+          top:-5px;
+          right:10px;
+          color:#777;
+          cursor:pointer;
+          background:#fff;
+          border:1px solid #ccc;
+          border-radius:4px;
+          padding:3px;
+        }
+        .mainBorrowBottom{
+          background:rgb(249,249,249);
+        }
+        .borderTable{
+          padding:0 10px;
+          background:#fff;
+          position:absolute;
+          top:90px;
+          left:10px;
+          right:10px;
+          bottom:0;
+        }
+      }
+    }
+  }

@@ -1,0 +1,57 @@
+/**
+ * @css
+ * @我的借阅
+ */
+ section{
+    padding:0 10px;
+    height:100%;
+    overflow-y:hidden;
+    .DioformList{
+        padding: 10px;
+        box-sizing: border-box;
+        height:100%;
+        width:100%;
+        overflow: auto;
+        .el-row {
+            margin-bottom: 0px;
+            z-index: 1;
+          }
+          .el-col {
+            border-radius: 0px;
+            z-index: 1;
+          }
+          .bg-purple {
+            background: #ebebeb;
+            border:1px solid #ccc;
+            border-top:0;
+            border-right:0;
+          }
+          .bg-purple-light {
+            background: #fff;
+            border:1px solid #ccc;
+            border-top:0;
+            border-right:0;
+          }
+          .grid-content {
+            border-radius: 0px;
+            min-height: 28px;
+          }
+        .span1{
+          position:relative;
+          left:10px;
+          top:10px;
+          
+        }
+        .span2{
+          position:relative;
+          left:20px;
+          top:10px;
+         
+        }
+    }
+  }
+  .closeBtn{
+      position: relative;
+      top:15px;
+      left:40%;
+  }
